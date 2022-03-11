@@ -1,0 +1,34 @@
+name: linux
+
+on:
+  pull_request:
+  push:
+  release:
+    types: published
+
+jobs:
+  linux:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        platform: [clang, gcc]
+        os: [ubuntu-18.04, ubuntu-20.04]
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: 'true'
+        fetch-depth: 0
+        ref: ${{ github.event.pull_request.head.sha }}
+        
+    - name: Install dependencies
+      run: |
+          sudo apt-get update && sudo apt-get install -y ninja-build clang-format-10 libspeex-dev
+
+    - name: Configure GameSpySDK
+      run: |
+        cmake --preset ${{ matrix.platform }}
+        
+    - name: Build GameSpySDK
+      run: |
+        cmake --build build
