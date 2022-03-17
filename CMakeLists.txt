@@ -93,6 +93,30 @@ if(GS_INCLUDE_VOICE)
     endif()
 endif()
 
+if(GS_OPENSSL)
+    find_package(OpenSSL COMPONENTS SSL)
+
+    if (NOT OPENSSL_FOUND)
+        include(FetchContent)
+
+        FetchContent_Declare(
+            openssl_git
+            GIT_REPOSITORY https://github.com/janbar/openssl-cmake.git
+            GIT_TAG        e0224176e43dbbfb5308ae5f3d44611180138419
+        )
+
+        # We don't use FetchContent_MakeAvailable here because we don't want all OpenSSL targets including, just our dependencies.
+        FetchContent_GetProperties(openssl_git)
+        if(NOT openssl_git_POPULATED)
+            FetchContent_Populate(openssl_git)
+            set(ENABLE_PACKAGE_CONFIG FALSE)
+            set(BUILD_SHARED_LIBS FALSE)
+            add_subdirectory(${openssl_git_SOURCE_DIR} ${openssl_git_BINARY_DIR} EXCLUDE_FROM_ALL)
+        endif()
+        add_library(OpenSSL::SSL ALIAS ssl)
+    endif()
+endif()
+
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})

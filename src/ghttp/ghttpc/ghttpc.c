@@ -222,7 +222,7 @@ int test_main(int argc, char** argv)
 #endif
 
     // stream a page
-    request = ghttpStreamEx(_T("http://www.gamespy.net"),
+    request = ghttpStreamEx(_T("http://www.google.com"),
                             NULL,
                             NULL,
                             GHTTPFalse,
@@ -246,7 +246,7 @@ int test_main(int argc, char** argv)
 #if defined(_REVOLUTION)
         _T("https://mariokartwii.race.gs.nintendowifi.net/RaceService/test.txt"),
 #else
-        _T("https://www.gamespyid.com/"),
+        _T("https://encrypted.google.com/"),
 #endif
         NULL,
         NULL,

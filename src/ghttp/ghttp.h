@@ -117,9 +117,8 @@ typedef enum
     GHTTPEncryptionEngine_GameSpy,   // must add /common/gsSSL.h and /common/gsSSL.c to project
     GHTTPEncryptionEngine_MatrixSsl, // must define MATRIXSSL and include matrixssl source files
     GHTTPEncryptionEngine_RevoEx,    // must define REVOEXSSL and include RevoEX SSL source files
-
-    GHTTPEncryptionEngine_Default // Will use GameSpy unless another engine is defined
-                                  //   using MATRIXSSL or REVOEXSSL
+    GHTTPEncryptionEngine_Default, // Will use GameSpy unless another engine is defined using MATRIXSSL or REVOEXSSL
+    GHTTPEncryptionEngine_OpenSSL, // must define OPENSSL and link OpenSSL libraries
 } GHTTPEncryptionEngine;
 
 // Represents an http file request.
