@@ -7,4 +7,4 @@ target_sources(gsqr2 PRIVATE
 )
 
 target_link_libraries(gsqr2 PUBLIC gsinterface)
-set_target_properties(gsqr2 PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gsqr2 PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

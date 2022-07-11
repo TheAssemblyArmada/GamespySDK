@@ -12,4 +12,4 @@ target_sources(gsserverbrowsing PRIVATE
 )
 
 target_link_libraries(gsserverbrowsing PUBLIC gsinterface)
-set_target_properties(gsserverbrowsing PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gsserverbrowsing PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

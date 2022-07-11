@@ -31,4 +31,4 @@ target_sources(gspeer PRIVATE
 )
 
 target_link_libraries(gspeer PUBLIC gsinterface)
-set_target_properties(gspeer PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gspeer PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

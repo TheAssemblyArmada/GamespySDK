@@ -5,4 +5,4 @@ target_sources(gspinger PRIVATE
 )
 
 target_link_libraries(gspinger PUBLIC gsinterface)
-set_target_properties(gspinger PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gspinger PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

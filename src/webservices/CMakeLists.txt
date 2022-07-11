@@ -5,4 +5,4 @@ target_sources(gswebservices PRIVATE
 )
 
 target_link_libraries(gswebservices PUBLIC gsinterface)
-set_target_properties(gswebservices PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gswebservices PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

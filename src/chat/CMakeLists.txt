@@ -17,4 +17,4 @@ target_sources(gschat PRIVATE
 )
 
 target_link_libraries(gschat PUBLIC gsinterface)
-set_target_properties(gschat PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gschat PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

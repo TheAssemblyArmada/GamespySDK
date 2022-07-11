@@ -42,4 +42,4 @@ target_sources(gscommon PRIVATE
 )
 
 target_link_libraries(gscommon PUBLIC gsinterface)
-set_target_properties(gscommon PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gscommon PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

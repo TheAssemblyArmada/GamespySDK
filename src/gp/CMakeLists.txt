@@ -35,4 +35,4 @@ target_sources(gsgp PRIVATE
 )
 
 target_link_libraries(gsgp PUBLIC gsinterface)
-set_target_properties(gsgp PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gsgp PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})
