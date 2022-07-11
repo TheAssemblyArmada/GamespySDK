@@ -26,4 +26,4 @@ target_sources(gsgt2 PRIVATE
 )
 
 target_link_libraries(gsgt2 PUBLIC gsinterface)
-set_target_properties(gsgt2 PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gsgt2 PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

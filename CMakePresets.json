@@ -38,6 +38,7 @@
             "inherits": "default-win",
             "displayName": "MSVC CL build",
             "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
                 "GS_C_FLAGS": "/Zc:strictStrings;/W3"
             }
         },

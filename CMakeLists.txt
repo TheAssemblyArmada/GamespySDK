@@ -26,11 +26,14 @@ if (CMAKE_BINARY_DIR STREQUAL CMAKE_SOURCE_DIR)
     message(FATAL_ERROR "Building in-source is not supported! Create a build dir and remove ${CMAKE_SOURCE_DIR}/CMakeCache.txt")
 endif()
 
+# Decide if this project is the top level project, if so enable development targets.
+string(COMPARE EQUAL "${CMAKE_SOURCE_DIR}" "${CMAKE_CURRENT_SOURCE_DIR}" is_top_level)
+
 # Do we want OpenSSL support or integrated GameSpy SSLv3 engine support?
 option(GS_OPENSSL "Enable OpenSSL support" ON)
 option(GS_HTTPLOG "Enable HTTP logging" OFF)
 option(GS_SECURESECONNECT "Enable connecting to GameSpy services with a secure protocol (HTTPS)" ON)
-option(GS_BUILD_TESTS "Builds test executables." OFF)
+option(GS_BUILD_TESTS "Builds test executables." ${is_top_level})
 option(GS_INCLUDE_VOICE "Build the Voice2 SDK component." OFF)
 
 add_feature_info(OpenSSL GS_OPENSSL "Use OpenSSL library for HTTPS support.")
@@ -43,7 +46,8 @@ if(WIN32 OR "${CMAKE_SYSTEM}" MATCHES "Windows")
     list(APPEND GS_COMPILE_DEFS _CRT_SECURE_NO_DEPRECATE _CRT_NONSTDC_NO_DEPRECATE _WINSOCK_DEPRECATED_NO_WARNINGS)
     
 	# WinSock1 is deprecated, it's better to use WinSock2
-    option(GS_WINSOCK2 "Link against Windows Socket 2 instead of Windows Socket 1." OFF)
+    option(GS_WINSOCK2 "Link against Windows Socket 2 instead of Windows Socket 1." ON)
+    add_feature_info(UseWinsock2 GS_WINSOCK2 "Library will link against winsock2 instead of winsock1.")
 endif()
 
 if(GAMESPY_SERVER_NAME)
@@ -65,8 +69,17 @@ if(GS_MEM_MANAGED)
     list(APPEND GS_COMPILE_DEFS GSI_MEM_MANAGED)
 endif()
 
-find_package(ClangFormat)
-include(ClangFormat)
+if(is_top_level)
+    # Set up a format target to do automated clang format checking.
+    find_package(ClangFormat)
+    include(ClangFormat)
+endif()
+
+if(DEFINED gamespy_SHARED_LIBS)
+    set(BUILD_SHARED_LIBS "${gamespy_SHARED_LIBS}")
+elseif(NOT DEFINED BUILD_SHARED_LIBS)
+    set(BUILD_SHARED_LIBS OFF)
+endif()
 
 if(GS_INCLUDE_VOICE)
     # Speex is needed to build the voice2 SDK.
@@ -86,7 +99,6 @@ if(GS_INCLUDE_VOICE)
         if(NOT speex_git_POPULATED)
             FetchContent_Populate(speex_git)    
             set(ENABLE_PACKAGE_CONFIG FALSE)
-            set(BUILD_SHARED_LIBS FALSE)
             add_subdirectory(${speex_git_SOURCE_DIR} ${speex_git_BINARY_DIR} EXCLUDE_FROM_ALL)
         endif()
         set(SPEEX_LIBRARIES speex)
@@ -110,7 +122,8 @@ if(GS_OPENSSL)
         if(NOT openssl_git_POPULATED)
             FetchContent_Populate(openssl_git)
             set(ENABLE_PACKAGE_CONFIG FALSE)
-            set(BUILD_SHARED_LIBS FALSE)
+            # TODO currently we don't support linking the static runtime.
+            set(MSVC_DYNAMIC_RUNTIME TRUE)
             add_subdirectory(${openssl_git_SOURCE_DIR} ${openssl_git_BINARY_DIR} EXCLUDE_FROM_ALL)
         endif()
         add_library(OpenSSL::SSL ALIAS ssl)

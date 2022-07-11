@@ -8,4 +8,4 @@ target_sources(gsnatneg PRIVATE
 )
 
 target_link_libraries(gsnatneg PUBLIC gsinterface)
-set_target_properties(gsnatneg PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gsnatneg PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

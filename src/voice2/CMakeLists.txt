@@ -38,7 +38,7 @@ if(UNIX AND NOT APPLE)
 endif()
 
 target_link_libraries(gsvoice2 PUBLIC gsinterface)
-set_target_properties(gsvoice2 PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gsvoice2 PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})
 
 target_link_libraries(gsvoice2 PUBLIC ${SPEEX_LIBRARIES})
 target_include_directories(gsvoice2 PRIVATE $<BUILD_INTERFACE:${SPEEX_INCLUDE_DIRS}>)

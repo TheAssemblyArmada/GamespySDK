@@ -14,4 +14,4 @@ target_sources(gssc PRIVATE
 )
 
 target_link_libraries(gssc PUBLIC gsinterface)
-set_target_properties(gssc PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gssc PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

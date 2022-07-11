@@ -23,7 +23,7 @@ target_sources(gshttp PRIVATE
 )
 
 target_link_libraries(gshttp PUBLIC gsinterface)
-set_target_properties(gshttp PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gshttp PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})
 target_compile_definitions(gshttp PUBLIC $<$<CONFIG:DEBUG>:GHTTP_EXTENDEDERROR=1>)
 
 if(GS_HTTPLOG)

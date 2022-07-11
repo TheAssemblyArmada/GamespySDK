@@ -8,4 +8,4 @@ target_sources(gsgstats PRIVATE
 )
 
 target_link_libraries(gsgstats PUBLIC gsinterface)
-set_target_properties(gsgstats PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gsgstats PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})

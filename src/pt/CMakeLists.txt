@@ -5,4 +5,4 @@ target_sources(gspt PRIVATE
 )
 
 target_link_libraries(gspt PUBLIC gsinterface)
-set_target_properties(gspt PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(gspt PROPERTIES POSITION_INDEPENDENT_CODE ${BUILD_SHARED_LIBS})
