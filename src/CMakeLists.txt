@@ -11,6 +11,10 @@ if(WIN32 OR "${CMAKE_SYSTEM}" MATCHES "Windows")
     else()
         target_link_libraries(gsinterface INTERFACE wsock32)
     endif()
+	
+	if("${CMAKE_CXX_COMPILER_ID}" MATCHES "MSVC" AND CMAKE_CXX_COMPILER_VERSION VERSION_LESS "16.0")
+        target_include_directories(gsinterface INTERFACE stdint)
+    endif()
 endif()
 
 add_subdirectory(common)
