@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         platform: [clang, gcc]
-        os: [ubuntu-18.04, ubuntu-20.04]
+        os: [ubuntu-20.04, ubuntu-24.04]
 
     steps:
     - uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-          sudo apt-get update && sudo apt-get install -y ninja-build clang-format-10 libspeex-dev
+          sudo apt-get update && sudo apt-get install -y ninja-build libspeex-dev
 
     - name: Configure GameSpySDK
       run: |

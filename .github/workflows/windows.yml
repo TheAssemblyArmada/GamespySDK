@@ -8,10 +8,11 @@ on:
 
 jobs:
   windows_msvc:
-    runs-on: windows-2019
+    runs-on: ${{ matrix.os }}
     strategy:
       matrix:
         platform: [x86, amd64]
+        os: [windows-2019, windows-2022]
     steps:
     - uses: actions/checkout@v2
       with:
