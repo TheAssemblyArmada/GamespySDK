@@ -1,10 +1,10 @@
-#include "../gv.h"
+#include "gv.h"
 #include <stdio.h>
 #include <math.h>
 #if defined(_WIN32)
 #include <conio.h>
 #elif defined(_PS2)
-#include "../../common/ps2/ps2pad.h"
+#include "ps2/ps2pad.h"
 #elif defined(_PS3)
 //#define USER_CREATED_SPURS_INSTANCE
 #include <cell/pad.h>

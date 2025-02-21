@@ -1,4 +1,4 @@
-#include "../nonport.h"
+#include "nonport.h"
 #include "touch.h"
 
 void TouchInit(void)

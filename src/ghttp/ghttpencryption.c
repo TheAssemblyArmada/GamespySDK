@@ -1107,10 +1107,10 @@ GHIEncryptionResult ghiEncryptorSslDecryptFunc(struct GHIConnection* connection,
 ///////////////////////////////////////////////////////////////////////////////
 #else
 
-#include "../common/gsssl.h"
-#include "../common/gssha1.h"
-#include "../common/gsrc4.h"
-#include "../common/md5.h"
+#include "gsssl.h"
+#include "gssha1.h"
+#include "gsrc4.h"
+#include "md5.h"
 
 // Processor for SSL state messages (transparent to application)
 static GHIEncryptionResult

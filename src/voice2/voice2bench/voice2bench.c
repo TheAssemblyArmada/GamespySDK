@@ -1,4 +1,4 @@
-#include "../gv.h"
+#include "gv.h"
 #include "voicesample.h"
 #include <stdio.h>
 
@@ -6,7 +6,7 @@ GVByte voice_sample[80000];
 
 #if defined(_PS2)
 
-#include "../gvlogitechps2codecs.h"
+#include "gvlogitechps2codecs.h"
 
 static GVBool Init(GVCodec codec)
 {
@@ -62,7 +62,7 @@ static void Decode(GVSample* out, const GVByte* in, GVDecoderData data)
 
 #elif defined(_PSP) || defined(_WIN32)
 
-#include "../gsm-1.0-pl12/inc/gsm.h"
+#include "gsm-1.0-pl12/inc/gsm.h"
 
 gsm EncoderState;
 
@@ -109,7 +109,7 @@ static void Decode(GVSample* out, const GVByte* in, GVDecoderData data)
 
 #else
 
-#include "../gvspeex.h"
+#include "gvspeex.h"
 
 static GVBool Init(GVCodec codec, GVRate sampleRate)
 {

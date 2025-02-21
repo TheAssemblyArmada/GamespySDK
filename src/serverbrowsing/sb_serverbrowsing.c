@@ -1,6 +1,6 @@
 #include "sb_internal.h"
 #include "sb_ascii.h"
-#include "../natneg/natneg.h"
+#include "natneg.h"
 
 //Future Versions:
 //ICMP Ping support (icmp engine)

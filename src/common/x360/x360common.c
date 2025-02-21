@@ -1,6 +1,6 @@
-#include "../gscommon.h"
-#include "../gsmemory.h"
-#include "../gsdebug.h"
+#include "gscommon.h"
+#include "gsmemory.h"
+#include "gsdebug.h"
 #include <malloc.h>
 // Debug output
 #ifdef GSI_COMMON_DEBUG

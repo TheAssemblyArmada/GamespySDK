@@ -5,9 +5,9 @@
 #include "track.h"
 #include "trackDlg.h"
 
-#include "../gstats.h"
-#include "../../common/gsAvailable.h"
-#include "../../ghttp/ghttp.h"
+#include "gstats.h"
+#include "gsAvailable.h"
+#include "ghttp.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

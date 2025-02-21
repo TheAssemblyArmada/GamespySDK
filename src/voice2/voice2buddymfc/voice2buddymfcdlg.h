@@ -10,7 +10,7 @@
 
 /////////////////////////////////////////////////////////////////////////////
 // CVoice2BuddyMFCDlg dialog
-#include "../../gp/gp.h"
+#include "gp.h"
 #include "setupdlg.h"
 
 class CVoice2BuddyMFCDlg : public CDialog

@@ -1,4 +1,4 @@
-#include "../nonport.h"
+#include "nonport.h"
 #include "wireless.h"
 #include "screen.h"
 #include "menu.h"

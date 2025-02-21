@@ -17,8 +17,8 @@
 #include <utility\utility_common.h>
 #include <utility\utility_netconf.h>
 
-#include "../gscommon.h"
-#include "../gsplatformsocket.h"
+#include "gscommon.h"
+#include "gsplatformsocket.h"
 
 #if (0) // enable after remove from platform socket
 int SetSockBlocking(SOCKET sock, int isblocking)

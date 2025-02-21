@@ -19,7 +19,7 @@
 #include <afxcmn.h> // mfc support for windows common controls
 #endif              // _AFX_NO_AFXCMN_SUPPORT
 
-#include "../ghttp.h"
+#include "ghttp.h"
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

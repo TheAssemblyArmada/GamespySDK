@@ -24,7 +24,7 @@
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.
 
-#include "../gp.h"
-#include "../../common/gsavailable.h"
+#include "gp.h"
+#include "gsavailable.h"
 
 #endif // !defined(AFX_STDAFX_H__8A9E3741_2C27_4AC4_AB95_C33A19DEB835__INCLUDED_)

@@ -5,14 +5,14 @@
 /*************
 ** INCLUDES **
 *************/
-#include "../chat.h"
-#include "../../common/gsstringutil.h"
+#include "chat.h"
+#include "gsstringutil.h"
 
 #ifdef UNDER_CE
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

@@ -1,7 +1,7 @@
-#include "../pt.h"
-#include "../../ghttp/ghttp.h"
-#include "../../common/gsavailable.h"
-#include "../../common/gsstringutil.h"
+#include "pt.h"
+#include "ghttp.h"
+#include "gsavailable.h"
+#include "gsstringutil.h"
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -10,7 +10,7 @@
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

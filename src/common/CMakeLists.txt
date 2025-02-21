@@ -1,43 +1,43 @@
 add_library(gscommon OBJECT)
 target_sources(gscommon PRIVATE
     darray.c
-    darray.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/darray.h
     gsassert.c
-    gsassert.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsassert.h
     gsavailable.c
-    gsavailable.h
-    gscommon.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsavailable.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gscommon.h
     gscore.c
-    gscore.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gscore.h
     gscrypt.c
-    gscrypt.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gscrypt.h
     gsdebug.c
-    gsdebug.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsdebug.h
     gslargeint.c
-    gslargeint.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gslargeint.h
     gsmemory.c
-    gsmemory.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsmemory.h
     gsplatform.c
-    gsplatform.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsplatform.h
     gsplatformsocket.c
-    gsplatformsocket.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsplatformsocket.h
     gsplatformthread.c
-    gsplatformthread.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsplatformthread.h
     gsplatformutil.c
-    gsplatformutil.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsplatformutil.h
     gsrc4.c
-    gsrc4.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsrc4.h
     gssha1.c
-    gssha1.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gssha1.h
     gsssl.c
-    gsssl.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsssl.h
     gsstringutil.c
-    gsstringutil.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsstringutil.h
     gsxml.c
-    gsxml.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gsxml.h
     hashtable.c
-    hashtable.h
-    md5.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/hashtable.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/md5.h
     md5c.c
 )
 

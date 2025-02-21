@@ -5,9 +5,9 @@
 /*********
 INCLUDES 
 *********/
-#include "../peer.h"
-#include "../../common/gsstringutil.h"
-#include "../../common/gsavailable.h"
+#include "peer.h"
+#include "gsstringutil.h"
+#include "gsavailable.h"
 
 /********
 DEFINES
@@ -19,7 +19,7 @@ DEFINES
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

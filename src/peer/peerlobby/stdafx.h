@@ -22,8 +22,8 @@
 
 #include <afxsock.h> // mfc socket extensions
 
-#include "../peer.h"
-#include "../../common/gsavailable.h"
+#include "peer.h"
+#include "gsavailable.h"
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

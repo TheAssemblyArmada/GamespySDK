@@ -16,7 +16,7 @@ devsupport@gamespy.com
 /********
 INCLUDES
 ********/
-#include "../qr2.h"
+#include "qr2.h"
 
 /********
 DEFINES
@@ -33,7 +33,7 @@ DEFINES
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

@@ -16,9 +16,9 @@ INCLUDES
 ********/
 #include "gstats.h"
 #include "gpersist.h"
-#include "../common/gsavailable.h"
-#include "../common/darray.h"
-#include "../common/md5.h"
+#include "gsavailable.h"
+#include "darray.h"
+#include "md5.h"
 
 #ifdef __cplusplus
 extern "C" {

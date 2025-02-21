@@ -9,9 +9,9 @@ Copyright 2000 GameSpy Industries, Inc
 
 #include <stdio.h>
 #include "pt.h"
-#include "../ghttp/ghttp.h"
-#include "../common/gsstringutil.h"
-#include "../common/gsavailable.h"
+#include "ghttp.h"
+#include "gsstringutil.h"
+#include "gsavailable.h"
 
 /************
 ** DEFINES **

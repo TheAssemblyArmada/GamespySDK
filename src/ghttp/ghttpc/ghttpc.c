@@ -8,14 +8,14 @@ Copyright 1999-2007 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "../../common/gscommon.h"
-#include "../ghttp.h"
+#include "gscommon.h"
+#include "ghttp.h"
 
 #ifdef UNDER_CE
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

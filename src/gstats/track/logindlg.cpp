@@ -5,7 +5,7 @@
 #include "track.h"
 #include "LoginDlg.h"
 
-#include "../../gp/gp.h"
+#include "gp.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

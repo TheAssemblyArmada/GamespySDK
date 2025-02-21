@@ -6,10 +6,10 @@
 //
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-#include "../gsplatformutil.h"
-#include "../gsplatformthread.h"
-#include "../gsassert.h"
-#include "../gsdebug.h"
+#include "gsplatformutil.h"
+#include "gsplatformthread.h"
+#include "gsassert.h"
+#include "gsdebug.h"
 #include <pthread.h>
 
 #define _REENTRANT

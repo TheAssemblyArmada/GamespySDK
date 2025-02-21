@@ -1,6 +1,6 @@
-#include "../../nonport.h"
-#include "../../peer/peer.h"
-#include "../../peer/peermain.h"
+#include "nonport.h"
+#include "peer.h"
+#include "peermain.h"
 #include "menu.h"
 #include "screen.h"
 

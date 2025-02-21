@@ -1,6 +1,6 @@
 #include "nninternal.h"
-#include "../common/darray.h"
-#include "../common/gsavailable.h"
+#include "darray.h"
+#include "gsavailable.h"
 #include <stddef.h>
 #include <stdio.h>
 #include "natify.h"

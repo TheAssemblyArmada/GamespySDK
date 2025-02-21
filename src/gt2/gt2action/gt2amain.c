@@ -17,7 +17,7 @@ Copyright 2000 GameSpy Industries, Inc
 #include "gt2aserver.h"
 #include "gt2ainput.h"
 #include "gt2asound.h"
-#include "../../ghttp/ghttp.h"
+#include "ghttp.h"
 
 const V3b Red = {255, 0, 0};
 const V3b Green = {0, 255, 0};

@@ -10,9 +10,9 @@
 #include <netex/libnetctl.h>
 #include <sysutil/sysutil_common.h>
 
-#include "../gsplatform.h"
-#include "../gsplatformutil.h"
-#include "../gsmemory.h"
+#include "gsplatform.h"
+#include "gsplatformutil.h"
+#include "gsmemory.h"
 // entry point for GameSpy samples
 extern int test_main(int argc, char** argp);
 

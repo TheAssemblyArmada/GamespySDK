@@ -1,6 +1,6 @@
 add_library(gspinger OBJECT)
 target_sources(gspinger PRIVATE
-    pinger.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/pinger.h
     pingermain.c
 )
 

@@ -27,7 +27,7 @@ devsupport@gamespy.com
 #include "peerqr.h"
 #include "peerhost.h"
 #include "peerautomatch.h"
-#include "../common/gsavailable.h"
+#include "gsavailable.h"
 
 /************
 ** DEFINES **

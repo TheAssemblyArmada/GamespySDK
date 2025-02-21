@@ -1,25 +1,25 @@
 add_library(gshttp OBJECT)
 target_sources(gshttp PRIVATE
-    ghttp.h
-    ghttpascii.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttp.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttpascii.h
     ghttpbuffer.c
-    ghttpbuffer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttpbuffer.h
     ghttpcallbacks.c
-    ghttpcallbacks.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttpcallbacks.h
     ghttpcommon.c
-    ghttpcommon.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttpcommon.h
     ghttpconnection.c
-    ghttpconnection.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttpconnection.h
     ghttpencryption.c
-    ghttpencryption.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttpencryption.h
     ghttpmain.c
-    ghttpmain.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttpmain.h
     ghttppost.c
-    ghttppost.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttppost.h
     ghttpprocess.c
-    ghttpprocess.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/ghttpprocess.h
     gssoap.c
-    gssoap.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gssoap.h
 )
 
 target_link_libraries(gshttp PUBLIC gsinterface)

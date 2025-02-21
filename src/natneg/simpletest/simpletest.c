@@ -1,13 +1,13 @@
 
 
-#include "../natneg.h"
-#include "../../common/gsavailable.h"
+#include "natneg.h"
+#include "gsavailable.h"
 
 #ifdef UNDER_CE
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

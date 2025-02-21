@@ -4,7 +4,7 @@
 #include "stdafx.h"
 #include "multiTrack.h"
 #include "LoginDlg.h"
-#include "../../common/gsAvailable.h"
+#include "gsAvailable.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW

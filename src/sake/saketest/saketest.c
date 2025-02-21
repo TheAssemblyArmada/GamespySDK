@@ -1,13 +1,13 @@
-#include "../../common/gscommon.h"
-#include "../../common/gsavailable.h"
-#include "../../common/gscore.h"
-#include "../../ghttp/gssoap.h"
-#include "../sake.h"
-#include "../../ghttp/ghttp.h"
-#include "../../gp/gp.h"
+#include "gscommon.h"
+#include "gsavailable.h"
+#include "gscore.h"
+#include "gssoap.h"
+#include "sake.h"
+#include "ghttp.h"
+#include "gp.h"
 
 #if defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

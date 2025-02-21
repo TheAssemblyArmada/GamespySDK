@@ -21,7 +21,7 @@ UPP = UDP Ping Protocol
 *************/
 #include <limits.h>
 #include "pinger.h"
-#include "../common/darray.h"
+#include "darray.h"
 
 /************
 ** DEFINES **

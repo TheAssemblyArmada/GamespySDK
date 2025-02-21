@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-#include "../../common/gscommon.h"
-#include "../../common/gscore.h"
-#include "../../common/gsavailable.h"
-#include "../../webservices/authservice.h"
-#include "../sc.h"
+#include "gscommon.h"
+#include "gscore.h"
+#include "gsavailable.h"
+#include "authservice.h"
+#include "sc.h"
 
 #include <float.h>
 
@@ -12,7 +12,7 @@
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

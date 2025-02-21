@@ -12,8 +12,8 @@ devsupport@gamespy.com
 #include "ghttpconnection.h"
 #include "ghttpmain.h"
 #include "ghttpcommon.h"
-#include "../common/gscrypt.h"
-#include "../common/gsssl.h"
+#include "gscrypt.h"
+#include "gsssl.h"
 
 // Resize the buffer.
 /////////////////////

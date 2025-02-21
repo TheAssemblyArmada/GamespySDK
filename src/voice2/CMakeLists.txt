@@ -1,34 +1,34 @@
 add_library(gsvoice2 OBJECT)
 target_sources(gsvoice2 PRIVATE
     gvcodec.c
-    gvcodec.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gvcodec.h
     gvcustomdevice.c
-    gvcustomdevice.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gvcustomdevice.h
     gvdevice.c
-    gvdevice.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gvdevice.h
     gvframe.c
-    gvframe.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gvframe.h
     gvmain.c
-    gvmain.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gvmain.h
     gvsource.c
-    gvsource.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gvsource.h
     gvspeex.c
-    gvspeex.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gvspeex.h
     gvutil.c
-    gvutil.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gvutil.h
 )
 
 if(WIN32 OR ${CMAKE_SYSTEM_NAME} MATCHES "Windows")
     target_sources(gsvoice2 PRIVATE
         gvdirectsound.c
-        gvdirectsound.h
+        ${PROJECT_SOURCE_DIR}/include/gamespy/gvdirectsound.h
     )
     
     target_link_libraries(gsvoice2 PUBLIC dsound dxguid)
 elseif(APPLE OR ${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
     target_sources(gsvoice2 PRIVATE
         gvosxaudio.c
-        gvosxaudio.h
+        ${PROJECT_SOURCE_DIR}/include/gamespy/gvosxaudio.h
     )
     target_link_libraries(gsvoice2 PUBLIC "-framework CoreAudio" "-framework AudioToolbox" "-framework CoreFoundation")
 endif()

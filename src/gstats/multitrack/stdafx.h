@@ -19,11 +19,11 @@
 #include <afxcmn.h> // mfc support for windows common controls
 #endif              // _AFX_NO_AFXCMN_SUPPORT
 
-#include "../gstats.h"
-#include "../../gp/gp.h"
-#include "../../ghttp/ghttp.h"
-#include "../../gt2/gt2.h"
-#include "../../gt2/gt2encode.h"
+#include "gstats.h"
+#include "gp.h"
+#include "ghttp.h"
+#include "gt2.h"
+#include "gt2encode.h"
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

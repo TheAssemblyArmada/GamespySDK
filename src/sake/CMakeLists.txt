@@ -1,11 +1,11 @@
 add_library(gssake OBJECT)
 target_sources(gssake PRIVATE
-    sake.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sake.h
     sakemain.c
-    sakemain.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sakemain.h
     sakerequest.c
-    sakerequest.h
-    sakerequestinternal.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sakerequest.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sakerequestinternal.h
     sakerequestmisc.c
     sakerequestmodify.c
     sakerequestread.c

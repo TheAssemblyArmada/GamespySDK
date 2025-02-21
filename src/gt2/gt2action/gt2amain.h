@@ -13,9 +13,9 @@ Copyright 2000 GameSpy Industries, Inc
 
 #include <stdio.h>
 #include <gl/glut.h>
-#include "../../nonport.h"
-#include "../gt2.h"
-#include "../gt2encode.h"
+#include "nonport.h"
+#include "gt2.h"
+#include "gt2encode.h"
 
 #define PORT_STRING ":12345"
 

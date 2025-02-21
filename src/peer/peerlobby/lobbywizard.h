@@ -1,7 +1,7 @@
 #if !defined(AFX_LOBBYWIZARD_H__683E0CE1_CBA4_46D1_948A_6047481CDBF6__INCLUDED_)
 #define AFX_LOBBYWIZARD_H__683E0CE1_CBA4_46D1_948A_6047481CDBF6__INCLUDED_
 
-#include "../peer.h"
+#include "peer.h"
 
 #if _MSC_VER > 1000
 #pragma once

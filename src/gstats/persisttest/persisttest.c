@@ -11,15 +11,15 @@ Please see the GameSpy Persistent Storage SDK for more info
 *****/
 
 #include <stdarg.h>
-#include "../../common/gscommon.h"
-#include "../../common/gsavailable.h"
-#include "../gpersist.h"
+#include "gscommon.h"
+#include "gsavailable.h"
+#include "gpersist.h"
 
 #ifdef UNDER_CE
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

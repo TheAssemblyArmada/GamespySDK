@@ -1,8 +1,8 @@
 
 #include "qr2regkeys.h"
 
-#include "../common/gsstringutil.h"
-#include "../common/gsdebug.h"
+#include "gsstringutil.h"
+#include "gsdebug.h"
 
 #ifdef __MWERKS__ // CodeWarrior requires prototypes
 void qr2_register_keyW(int keyid, const unsigned short* key);

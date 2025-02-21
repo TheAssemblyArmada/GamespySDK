@@ -7,7 +7,7 @@
 #include "gscommon.h"
 #include "gscore.h"
 #include "gsassert.h"
-#include "../ghttp/ghttp.h"
+#include "ghttp.h"
 
 // This defines how long the core will wait if there is a thread synchronization
 // problem when initializing or shutting down the core.

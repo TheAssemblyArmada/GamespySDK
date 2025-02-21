@@ -1,6 +1,6 @@
-#include "../gscommon.h"
-#include "../gsmemory.h"
-#include "../gsdebug.h"
+#include "gscommon.h"
+#include "gsmemory.h"
+#include "gsdebug.h"
 
 //extern void * __cdecl _aligned_malloc(size_t size, int boundary);
 

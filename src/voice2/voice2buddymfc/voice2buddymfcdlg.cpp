@@ -10,8 +10,8 @@
 #include "VoiceSessionDlg.h"
 
 
-#include "../../common/gsAvailable.h"
-#include "../../voice2/gv.h"
+#include "gsAvailable.h"
+#include "gv.h"
 
 
 #ifdef _DEBUG

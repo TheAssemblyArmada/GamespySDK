@@ -1,6 +1,6 @@
 
-#include "../gt2.h"
-#include "../../darray.h"
+#include "gt2.h"
+#include "darray.h"
 #include <time.h>
 
 #define STATS 1

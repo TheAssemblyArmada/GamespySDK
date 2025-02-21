@@ -1,7 +1,7 @@
 add_library(gswebservices OBJECT)
 target_sources(gswebservices PRIVATE
     authservice.c
-    authservice.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/authservice.h
 )
 
 target_link_libraries(gswebservices PUBLIC gsinterface)

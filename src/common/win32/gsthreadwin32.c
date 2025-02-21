@@ -1,9 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-#include "../gsplatformutil.h"
-#include "../gsplatformthread.h"
-#include "../gsassert.h"
-#include "../gsdebug.h"
+#include "gsplatformutil.h"
+#include "gsplatformthread.h"
+#include "gsassert.h"
+#include "gsdebug.h"
 
 void gsiInitializeCriticalSection(GSICriticalSection* theCrit)
 {

@@ -1,10 +1,10 @@
 add_library(gsgstats OBJECT)
 target_sources(gsgstats PRIVATE
     gbucket.c
-    gbucket.h
-    gpersist.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gbucket.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpersist.h
     gstats.c
-    gstats.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gstats.h
 )
 
 target_link_libraries(gsgstats PUBLIC gsinterface)

@@ -1,4 +1,4 @@
-#include "../gscommon.h"
+#include "gscommon.h"
 
 // One of the following network devices must be defined
 #if 0

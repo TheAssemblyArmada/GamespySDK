@@ -1,9 +1,9 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 #include "authservice.h"
-#include "../common/gsxml.h"
-#include "../common/gsavailable.h"
-#include "../common/md5.h"
+#include "gsxml.h"
+#include "gsavailable.h"
+#include "md5.h"
 
 #pragma warning(disable : 4267)
 

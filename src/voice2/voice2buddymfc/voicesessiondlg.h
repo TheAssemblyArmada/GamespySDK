@@ -10,8 +10,8 @@
 /////////////////////////////////////////////////////////////////////////////
 // CVoiceSessionDlg dialog
 #include "setupdlg.h"
-#include "../../gt2/gt2.h"
-#include "../../natneg/natneg.h"
+#include "gt2.h"
+#include "natneg.h"
 
 class CVoiceSessionDlg : public CDialog
 {

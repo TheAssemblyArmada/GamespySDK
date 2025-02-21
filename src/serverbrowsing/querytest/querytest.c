@@ -14,10 +14,10 @@ the Server Browisng SDK.
 
 ******/
 
-#include "../sb_serverbrowsing.h"
-#include "../sb_internal.h"
-#include "../../qr2/qr2.h"
-#include "../../common/gsavailable.h"
+#include "sb_serverbrowsing.h"
+#include "sb_internal.h"
+#include "qr2.h"
+#include "gsavailable.h"
 #include <conio.h>
 
 #define NUM_SIMUL_QUERIES 10

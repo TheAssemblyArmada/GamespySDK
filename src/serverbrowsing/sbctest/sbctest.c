@@ -19,9 +19,9 @@ INCLUDES
 #if defined(_WIN32)
 #include <conio.h> // used for keyboard input
 #endif
-#include "../sb_serverbrowsing.h"
-#include "../../qr2/qr2.h"
-#include "../../common/gsavailable.h"
+#include "sb_serverbrowsing.h"
+#include "qr2.h"
+#include "gsavailable.h"
 
 /********
 DEFINES
@@ -33,7 +33,7 @@ DEFINES
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

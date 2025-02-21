@@ -12,7 +12,7 @@ devsupport@gamespy.com
  information
 
 ******/
-#include "../common/md5.h"
+#include "md5.h"
 #include "gcdkeyc.h"
 #include <string.h>
 #include <stdio.h>

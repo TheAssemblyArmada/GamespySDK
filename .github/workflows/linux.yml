@@ -11,24 +11,26 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        platform: [clang, gcc]
+        cc: [clang, gcc]
         os: [ubuntu-20.04, ubuntu-24.04]
+        include:
+          - cc: clang
+            cxx: clang++
+          - cc: gcc
+            cxx: g++
 
     steps:
     - uses: actions/checkout@v2
       with:
-        submodules: 'true'
-        fetch-depth: 0
         ref: ${{ github.event.pull_request.head.sha }}
         
     - name: Install dependencies
       run: |
           sudo apt-get update && sudo apt-get install -y ninja-build libspeex-dev
 
-    - name: Configure GameSpySDK
+    - name: Build GamespySDK
+      env:
+        CC: ${{ matrix.cc }}
+        CXX: ${{ matrix.cxx }}
       run: |
-        cmake --preset ${{ matrix.platform }}
-        
-    - name: Build GameSpySDK
-      run: |
-        cmake --build build
+        cmake --workflow --preset unix

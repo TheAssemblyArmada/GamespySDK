@@ -17,8 +17,8 @@ Copyright 2000 GameSpy Industries, Inc
 /********
 INCLUDES
 ********/
-#include "../gt2.h"
-#include "../../qr2/qr2.h"
+#include "gt2.h"
+#include "qr2.h"
 
 #include <stdlib.h>
 #include <stdio.h>

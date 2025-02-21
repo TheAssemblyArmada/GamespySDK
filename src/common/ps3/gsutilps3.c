@@ -5,7 +5,7 @@
 #include <netex/net.h>
 #include <netex/libnetctl.h>
 
-#include "../gscommon.h"
+#include "gscommon.h"
 
 // This needs to be set during interface start
 extern int gNetInterfaceID;

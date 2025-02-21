@@ -1,5 +1,5 @@
-#include "../gp.h"
-#include "../../common/gsavailable.h"
+#include "gp.h"
+#include "gsavailable.h"
 
 #if defined(_WIN32) && !defined(UNDER_CE)
 #include <conio.h>
@@ -9,7 +9,7 @@
 void RetailOutputA(CHAR* tszErr, ...);
 #define printf RetailOutputA
 #elif defined(_NITRO)
-#include "../../common/nitro/screen.h"
+#include "nitro/screen.h"
 #define printf  Printf
 #define vprintf VPrintf
 #endif

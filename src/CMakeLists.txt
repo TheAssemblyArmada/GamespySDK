@@ -3,6 +3,10 @@ find_package(Threads REQUIRED)
 target_link_libraries(gsinterface INTERFACE Threads::Threads)
 target_compile_definitions(gsinterface INTERFACE ${GS_COMPILE_DEFS} $<$<CONFIG:DEBUG>:GSI_COMMON_DEBUG=1>)
 target_compile_options(gsinterface INTERFACE ${GS_C_FLAGS})
+target_include_directories(gsinterface INTERFACE
+    ${PROJECT_SOURCE_DIR}/include
+    ${PROJECT_SOURCE_DIR}/include/gamespy
+)
 
 # Handle linking sockets library.
 if(WIN32 OR "${CMAKE_SYSTEM}" MATCHES "Windows")
@@ -64,7 +68,8 @@ add_library(gamespy::gamespy ALIAS gamespy)
 target_link_libraries(gamespy PRIVATE ${GAMESPY_MODULES})
 
 target_include_directories(gamespy PUBLIC
-    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
+    $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include/gamespy>
     $<INSTALL_INTERFACE:include>
 )
 

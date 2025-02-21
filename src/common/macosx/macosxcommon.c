@@ -1,6 +1,6 @@
-#include "../gscommon.h"
-#include "../gsmemory.h"
-#include "../gsdebug.h"
+#include "gscommon.h"
+#include "gsmemory.h"
+#include "gsdebug.h"
 
 // sample common entry point
 extern int test_main(int argc, char** argp);

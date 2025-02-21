@@ -18,9 +18,9 @@ INCLUDES
 ********/
 
 #include "gcdkeys.h"
-#include "../common/gscommon.h"
-#include "../common/gsavailable.h"
-#include "../common/gsdebug.h"
+#include "gscommon.h"
+#include "gsavailable.h"
+#include "gsdebug.h"
 #include <time.h>
 
 #ifdef GUSE_ASSERTS

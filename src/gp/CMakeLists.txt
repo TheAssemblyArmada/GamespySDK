@@ -1,37 +1,37 @@
 add_library(gsgp OBJECT)
 target_sources(gsgp PRIVATE
     gp.c
-    gp.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp.h
     gpi.c
-    gpi.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpi.h
     gpibuddy.c
-    gpibuddy.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpibuddy.h
     gpibuffer.c
-    gpibuffer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpibuffer.h
     gpicallback.c
-    gpicallback.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpicallback.h
     gpiconnect.c
-    gpiconnect.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiconnect.h
     gpiinfo.c
-    gpiinfo.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiinfo.h
     gpikeys.c
-    gpikeys.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpikeys.h
     gpioperation.c
-    gpioperation.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpioperation.h
     gpipeer.c
-    gpipeer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpipeer.h
     gpiprofile.c
-    gpiprofile.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiprofile.h
     gpips3.c
-    gpips3.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpips3.h
     gpisearch.c
-    gpisearch.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpisearch.h
     gpitransfer.c
-    gpitransfer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpitransfer.h
     gpiunique.c
-    gpiunique.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiunique.h
     gpiutility.c
-    gpiutility.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiutility.h
 )
 
 target_link_libraries(gsgp PUBLIC gsinterface)

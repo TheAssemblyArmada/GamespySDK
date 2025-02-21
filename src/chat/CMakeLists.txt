@@ -1,19 +1,19 @@
 add_library(gschat OBJECT)
 target_sources(gschat PRIVATE
-    chat.h
-    chatascii.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/chat.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/chatascii.h
     chatcallbacks.c
-    chatcallbacks.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/chatcallbacks.h
     chatchannel.c
-    chatchannel.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/chatchannel.h
     chatcrypt.c
-    chatcrypt.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/chatcrypt.h
     chathandlers.c
-    chathandlers.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/chathandlers.h
     chatmain.c
-    chatmain.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/chatmain.h
     chatsocket.c
-    chatsocket.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/chatsocket.h
 )
 
 target_link_libraries(gschat PUBLIC gsinterface)

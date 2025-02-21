@@ -20,10 +20,10 @@
 #include <afxcmn.h> // mfc support for windows common controls
 #endif              // _AFX_NO_AFXCMN_SUPPORT
 
-#include "../sc.h"
+#include "sc.h"
 //#include "atlas_competition_race_sample_app_v1.h" // admin site generated header file
 #include "atlas_sc_race_v1.h" // admin site generated header file
-#include "../../gp/gp.h"
+#include "gp.h"
 
 //{{AFX_INSERT_LOCATION}}
 // Microsoft Visual C++ will insert additional declarations immediately before the previous line.

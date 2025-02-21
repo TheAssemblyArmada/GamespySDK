@@ -1,4 +1,4 @@
-#include "../gscommon.h"
+#include "gscommon.h"
 
 gsi_i64 gsiStringToInt64(const char* theNumberStr)
 {

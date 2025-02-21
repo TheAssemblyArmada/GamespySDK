@@ -11,9 +11,9 @@ devsupport@gamespy.com
 /********
 INCLUDES
 ********/
-#include "../common/gscommon.h"
+#include "gscommon.h"
 #include "gbucket.h"
-#include "../common/hashtable.h"
+#include "hashtable.h"
 #include <ctype.h>
 
 #ifdef __cplusplus

@@ -14,18 +14,17 @@ jobs:
         os: [macos-13, macos-15]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
       with:
-        submodules: 'true'
-        fetch-depth: 0
         ref: ${{ github.event.pull_request.head.sha }}
-        
-    - uses: seanmiddleditch/gha-setup-ninja@master
 
-    - name: Configure GamespySDK
-      run: |
-        cmake --preset macos
-        
+    - uses: seanmiddleditch/gha-setup-ninja@v6
+      with:
+        version: 1.12.1
+
     - name: Build GamespySDK
+      env:
+        CC: clang
+        CXX: clang++
       run: |
-        cmake --build build
+        cmake --workflow --preset unix

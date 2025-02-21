@@ -1,11 +1,11 @@
 /********
 INCLUDES
 ********/
-#include "../common/gscommon.h"
-#include "../common/gsavailable.h"
+#include "gscommon.h"
+#include "gsavailable.h"
 #include "qr2.h"
 #include "qr2regkeys.h"
-#include "../natneg/natneg.h"
+#include "natneg.h"
 
 #ifdef __cplusplus
 extern "C" {

@@ -1,33 +1,33 @@
 add_library(gspeer OBJECT)
 target_sources(gspeer PRIVATE
-    peer.h
-    peerascii.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerascii.h
     peerautomatch.c
-    peerautomatch.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerautomatch.h
     peercallbacks.c
-    peercallbacks.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peercallbacks.h
     peerglobalcallbacks.c
-    peerglobalcallbacks.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerglobalcallbacks.h
     peerhost.c
-    peerhost.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerhost.h
     peerkeys.c
-    peerkeys.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerkeys.h
     peermain.c
-    peermain.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peermain.h
     peermangle.c
-    peermangle.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peermangle.h
     peeroperations.c
-    peeroperations.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peeroperations.h
     peerping.c
-    peerping.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerping.h
     peerplayers.c
-    peerplayers.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerplayers.h
     peerqr.c
-    peerqr.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerqr.h
     peerrooms.c
-    peerrooms.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peerrooms.h
     peersb.c
-    peersb.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peersb.h
 )
 
 target_link_libraries(gspeer PUBLIC gsinterface)
