@@ -15,7 +15,7 @@ simulating a game "host".
 
 ******/
 #include <stdarg.h>
-#include "gstats.h"
+#include "gstats/gstats.h"
 #include "gsavailable.h"
 
 #ifdef UNDER_CE

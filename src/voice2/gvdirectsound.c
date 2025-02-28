@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <math.h>
-#include "gvdirectsound.h"
-#include "gvdevice.h"
-#include "gvcodec.h"
-#include "gvsource.h"
-#include "gvutil.h"
+#include "voice2/gvdirectsound.h"
+#include "voice2/gvdevice.h"
+#include "voice2/gvcodec.h"
+#include "voice2/gvsource.h"
+#include "voice2/gvutil.h"
 #pragma warning(disable : 4201)
 #include <mmsystem.h>
 #include <dsound.h>

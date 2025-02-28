@@ -14,14 +14,14 @@ devsupport@gamespy.com
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "peermain.h"
-#include "peeroperations.h"
-#include "peersb.h"
-#include "peercallbacks.h"
-#include "peermangle.h"
-#include "peerrooms.h"
-#include "peerautomatch.h"
-#include "peerqr.h"
+#include "peer/peermain.h"
+#include "peer/peeroperations.h"
+#include "peer/peersb.h"
+#include "peer/peercallbacks.h"
+#include "peer/peermangle.h"
+#include "peer/peerrooms.h"
+#include "peer/peerautomatch.h"
+#include "peer/peerqr.h"
 
 /************
 ** GLOBALS **

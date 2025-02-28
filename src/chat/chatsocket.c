@@ -16,8 +16,8 @@ devsupport@gamespy.com
 #include <string.h>
 #include <limits.h>
 #include <stdlib.h>
-#include "chatmain.h"
-#include "chatsocket.h"
+#include "chat/chatmain.h"
+#include "chat/chatsocket.h"
 
 #if defined(_WIN32)
 // Silence the "conditional expression is constant" on the FD_SET macros

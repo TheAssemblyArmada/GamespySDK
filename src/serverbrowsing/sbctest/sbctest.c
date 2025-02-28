@@ -19,8 +19,8 @@ INCLUDES
 #if defined(_WIN32)
 #include <conio.h> // used for keyboard input
 #endif
-#include "sb_serverbrowsing.h"
-#include "qr2.h"
+#include "serverbrowsing/sb_serverbrowsing.h"
+#include "qr2/qr2.h"
 #include "gsavailable.h"
 
 /********

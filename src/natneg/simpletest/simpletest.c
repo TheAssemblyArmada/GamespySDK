@@ -1,6 +1,6 @@
 
 
-#include "natneg.h"
+#include "natneg/natneg.h"
 #include "gsavailable.h"
 
 #ifdef UNDER_CE

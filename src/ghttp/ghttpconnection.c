@@ -8,8 +8,8 @@ Copyright 1999-2007 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "ghttpconnection.h"
-#include "ghttpcommon.h"
+#include "ghttp/ghttpconnection.h"
+#include "ghttp/ghttpcommon.h"
 
 // Initial size and increment amount for the connections array.
 ///////////////////////////////////////////////////////////////

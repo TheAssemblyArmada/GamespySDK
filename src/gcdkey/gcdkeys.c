@@ -17,7 +17,7 @@ devsupport@gamespy.com
 INCLUDES
 ********/
 
-#include "gcdkeys.h"
+#include "gcdkey/gcdkeys.h"
 #include "gscommon.h"
 #include "gsavailable.h"
 #include "gsdebug.h"

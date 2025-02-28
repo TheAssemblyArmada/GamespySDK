@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <string.h>
-#include "sb_crypt.h"
+#include "serverbrowsing/sb_crypt.h"
 
 static unsigned char keyrand(GOACryptState* state,
                              int limit,

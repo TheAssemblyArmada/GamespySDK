@@ -8,7 +8,7 @@
 #include "hashtable.h"
 
 #include "sb_serverbrowsing.h"
-#include "qr2regkeys.h"
+#include "../qr2/qr2regkeys.h"
 
 #include "sb_crypt.h"
 

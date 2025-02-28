@@ -1,6 +1,6 @@
 add_library(gspt OBJECT)
 target_sources(gspt PRIVATE
-    ${PROJECT_SOURCE_DIR}/include/gamespy/pt.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/pt/pt.h
     ptmain.c
 )
 

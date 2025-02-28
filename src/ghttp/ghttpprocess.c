@@ -8,11 +8,11 @@ Copyright 1999-2007 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "ghttpprocess.h"
-#include "ghttpcallbacks.h"
-#include "ghttppost.h"
-#include "ghttpmain.h"
-#include "ghttpcommon.h"
+#include "ghttp/ghttpprocess.h"
+#include "ghttp/ghttpcallbacks.h"
+#include "ghttp/ghttppost.h"
+#include "ghttp/ghttpmain.h"
+#include "ghttp/ghttpcommon.h"
 
 // Parse the URL into:
 //   server address (and IP)

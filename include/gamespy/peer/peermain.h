@@ -17,8 +17,8 @@ devsupport@gamespy.com
 #include "peer.h"
 #include "darray.h"
 #include "hashtable.h"
-#include "pinger.h"
-#include "chatascii.h"
+#include "../pinger/pinger.h"
+#include "../chat/chatascii.h"
 
 #ifdef __cplusplus
 extern "C" {

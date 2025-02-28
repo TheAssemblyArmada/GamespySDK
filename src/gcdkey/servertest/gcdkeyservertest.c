@@ -13,7 +13,7 @@ devsupport@gamespy.com
 
 ******/
 
-#include "gcdkeys.h"
+#include "gcdkey/gcdkeys.h"
 #include "gscommon.h"
 #include "gsavailable.h"
 #ifdef _WIN32

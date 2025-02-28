@@ -1,4 +1,4 @@
-#include "gvlogitechps2codecs.h"
+#include "voice2/gvlogitechps2codecs.h"
 #include <liblgcodec.h>
 
 #if !defined(_PS2)

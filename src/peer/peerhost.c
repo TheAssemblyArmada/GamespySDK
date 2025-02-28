@@ -11,8 +11,8 @@ devsupport@gamespy.com
 /*************
 ** INCLUDES **
 *************/
-#include "peerqr.h"
-#include "peerrooms.h"
+#include "peer/peerqr.h"
+#include "peer/peerrooms.h"
 
 /**************
 ** FUNCTIONS **

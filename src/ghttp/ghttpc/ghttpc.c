@@ -9,7 +9,7 @@ devsupport@gamespy.com
 */
 
 #include "gscommon.h"
-#include "ghttp.h"
+#include "ghttp/ghttp.h"
 
 #ifdef UNDER_CE
 void RetailOutputA(CHAR* tszErr, ...);

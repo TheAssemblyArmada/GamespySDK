@@ -8,8 +8,8 @@ Copyright 2002 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "gt2main.h"
-#include "gt2utility.h"
+#include "gt2/gt2main.h"
+#include "gt2/gt2utility.h"
 #include <stdio.h>
 #include <stdlib.h>
 #ifdef WIN32

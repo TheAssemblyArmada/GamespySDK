@@ -14,18 +14,18 @@ devsupport@gamespy.com
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "peer.h"
-#include "peerascii.h"
-#include "peermain.h"
-#include "peerglobalcallbacks.h"
-#include "peerrooms.h"
-#include "peerplayers.h"
-#include "peercallbacks.h"
-#include "peeroperations.h"
-#include "peerping.h"
-#include "peermangle.h"
-#include "peerkeys.h"
-#include "peerautomatch.h"
+#include "peer/peer.h"
+#include "peer/peerascii.h"
+#include "peer/peermain.h"
+#include "peer/peerglobalcallbacks.h"
+#include "peer/peerrooms.h"
+#include "peer/peerplayers.h"
+#include "peer/peercallbacks.h"
+#include "peer/peeroperations.h"
+#include "peer/peerping.h"
+#include "peer/peermangle.h"
+#include "peer/peerkeys.h"
+#include "peer/peerautomatch.h"
 
 /************
 ** DEFINES **

@@ -1,4 +1,4 @@
-#include "gpi.h"
+#include "gp/gpi.h"
 
 void gpiStatusInfoKeyFree(void* element)
 {

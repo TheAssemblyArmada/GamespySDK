@@ -12,10 +12,10 @@ devsupport@gamespy.com
 ** INCLUDES **
 *************/
 #include <string.h>
-#include "peerplayers.h"
-#include "peerping.h"
-#include "peercallbacks.h"
-#include "peerkeys.h"
+#include "peer/peerplayers.h"
+#include "peer/peerping.h"
+#include "peer/peercallbacks.h"
+#include "peer/peerkeys.h"
 
 /************
 ** DEFINES **

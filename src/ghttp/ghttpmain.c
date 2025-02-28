@@ -12,13 +12,13 @@ Irvine, California 92614
 devsupport@gamespy.com
 */
 
-#include "ghttpmain.h"
-#include "ghttpascii.h"
-#include "ghttpconnection.h"
-#include "ghttpcallbacks.h"
-#include "ghttpprocess.h"
-#include "ghttppost.h"
-#include "ghttpcommon.h"
+#include "ghttp/ghttpmain.h"
+#include "ghttp/ghttpascii.h"
+#include "ghttp/ghttpconnection.h"
+#include "ghttp/ghttpcallbacks.h"
+#include "ghttp/ghttpprocess.h"
+#include "ghttp/ghttppost.h"
+#include "ghttp/ghttpcommon.h"
 
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////

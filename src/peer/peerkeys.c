@@ -12,11 +12,11 @@ devsupport@gamespy.com
 ** INCLUDES **
 *************/
 #include <stdlib.h>
-#include "peerkeys.h"
-#include "peercallbacks.h"
-#include "peerrooms.h"
-#include "peerglobalcallbacks.h"
-#include "peermangle.h"
+#include "peer/peerkeys.h"
+#include "peer/peercallbacks.h"
+#include "peer/peerrooms.h"
+#include "peer/peerglobalcallbacks.h"
+#include "peer/peermangle.h"
 
 /************
 ** DEFINES **

@@ -1,7 +1,7 @@
-#include "gvps2audio.h"
-#include "gvps2spu2.h"
-#include "gvps2headset.h"
-#include "gvps2eyetoy.h"
+#include "voice2/gvps2audio.h"
+#include "voice2/gvps2spu2.h"
+#include "voice2/gvps2headset.h"
+#include "voice2/gvps2eyetoy.h"
 
 #if !defined(_PS2)
 #error This file should only be used with the PlayStation2

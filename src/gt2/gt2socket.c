@@ -8,12 +8,12 @@ Copyright 2002 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "gt2socket.h"
-#include "gt2buffer.h"
-#include "gt2message.h"
-#include "gt2connection.h"
-#include "gt2utility.h"
-#include "gt2callback.h"
+#include "gt2/gt2socket.h"
+#include "gt2/gt2buffer.h"
+#include "gt2/gt2message.h"
+#include "gt2/gt2connection.h"
+#include "gt2/gt2utility.h"
+#include "gt2/gt2callback.h"
 #include <stdlib.h>
 
 #ifdef GSI_ADHOC

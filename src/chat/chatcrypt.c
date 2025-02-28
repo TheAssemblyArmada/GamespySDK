@@ -1,4 +1,4 @@
-#include "chatcrypt.h"
+#include "chat/chatcrypt.h"
 
 #define swap_byte(x, y)                                                                                                \
     t = *(x);                                                                                                          \

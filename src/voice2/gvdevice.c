@@ -1,4 +1,4 @@
-#include "gvdevice.h"
+#include "voice2/gvdevice.h"
 
 /***********
 ** DEVICE **

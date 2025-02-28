@@ -1,8 +1,8 @@
-#include "gvsource.h"
-#include "gvcodec.h"
-#include "gvframe.h"
-#include "gvutil.h"
-#include "gvmain.h"
+#include "voice2/gvsource.h"
+#include "voice2/gvcodec.h"
+#include "voice2/gvframe.h"
+#include "voice2/gvutil.h"
+#include "voice2/gvmain.h"
 #include <stdio.h>
 
 // some code based on:

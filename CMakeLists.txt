@@ -5,9 +5,19 @@ if(POLICY CMP0074)
     cmake_policy(SET CMP0074 NEW)
 endif()
 
+# Disable default MSVC setting CRT type so we can set it ourselves.
+if(POLICY CMP0091)
+    cmake_policy(SET CMP0091 NEW)
+endif()
+
 # Disable default MSVC warning level so we can set it ourselves.
 if(POLICY CMP0092)
     cmake_policy(SET CMP0092 NEW)
+endif()
+
+# Allow specifying MSVC debug configurations.
+if(POLICY CMP0141)
+    cmake_policy(SET CMP0141 NEW)
 endif()
 
 project(gamespy VERSION 2.06 LANGUAGES C CXX)
@@ -45,7 +55,7 @@ add_feature_info(IncludeVoiceSDK GS_INCLUDE_VOICE "Library will include the Voic
 if(WIN32 OR "${CMAKE_SYSTEM}" MATCHES "Windows")
     list(APPEND GS_COMPILE_DEFS _CRT_SECURE_NO_DEPRECATE _CRT_NONSTDC_NO_DEPRECATE _WINSOCK_DEPRECATED_NO_WARNINGS)
     
-	# WinSock1 is deprecated, it's better to use WinSock2
+    # WinSock1 is deprecated, it's better to use WinSock2
     option(GS_WINSOCK2 "Link against Windows Socket 2 instead of Windows Socket 1." ON)
     add_feature_info(UseWinsock2 GS_WINSOCK2 "Library will link against winsock2 instead of winsock1.")
 endif()

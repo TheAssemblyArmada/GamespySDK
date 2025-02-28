@@ -18,7 +18,7 @@ Please see the GameSpy Presence SDK documentation for more information
 //////////
 #include "gscommon.h"
 #include "gsavailable.h"
-#include "gsudpengine.h"
+#include "../gt2/gsudpengine.h"
 #include "hashtable.h"
 #include "darray.h"
 #include "md5.h"

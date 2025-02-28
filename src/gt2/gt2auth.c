@@ -8,8 +8,8 @@ Copyright 2002 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "gt2main.h"
-#include "gt2auth.h"
+#include "gt2/gt2main.h"
+#include "gt2/gt2auth.h"
 #include <stdlib.h>
 
 #define CALCULATEODDMODE(buffer, i, oddmode)                                                                           \

@@ -1,9 +1,9 @@
-#include "gvps2spu2.h"
+#include "voice2/gvps2spu2.h"
 #if !defined(GV_NO_PS2_SPU2)
-#include "gvdevice.h"
-#include "gvcodec.h"
-#include "gvsource.h"
-#include "gvutil.h"
+#include "voice2/gvdevice.h"
+#include "voice2/gvcodec.h"
+#include "voice2/gvsource.h"
+#include "voice2/gvutil.h"
 #include <libsdr.h>
 #include <sif.h>
 

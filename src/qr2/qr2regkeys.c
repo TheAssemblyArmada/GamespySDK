@@ -1,5 +1,5 @@
 
-#include "qr2regkeys.h"
+#include "qr2/qr2regkeys.h"
 
 #include "gsstringutil.h"
 #include "gsdebug.h"

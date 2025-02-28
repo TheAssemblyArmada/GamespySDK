@@ -14,15 +14,15 @@ devsupport@gamespy.com
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "peerrooms.h"
-#include "peerplayers.h"
-#include "peermangle.h"
-#include "peercallbacks.h"
-#include "peerkeys.h"
-#include "peerqr.h"
-#include "peerhost.h"
-#include "peeroperations.h"
-#include "peersb.h"
+#include "peer/peerrooms.h"
+#include "peer/peerplayers.h"
+#include "peer/peermangle.h"
+#include "peer/peercallbacks.h"
+#include "peer/peerkeys.h"
+#include "peer/peerqr.h"
+#include "peer/peerhost.h"
+#include "peer/peeroperations.h"
+#include "peer/peersb.h"
 
 /**************
 ** FUNCTIONS **

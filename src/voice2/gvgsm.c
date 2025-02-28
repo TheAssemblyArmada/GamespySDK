@@ -1,4 +1,4 @@
-#include "gvgsm.h"
+#include "voice2/gvgsm.h"
 #include <gsm.h>
 
 // these are standard for GSM

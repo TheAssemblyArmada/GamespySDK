@@ -11,11 +11,11 @@ devsupport@gamespy.com
 /*************
 ** INCLUDES **
 *************/
-#include "peerqr.h"
-#include "peerglobalcallbacks.h"
-#include "peerplayers.h"
-#include "peerautomatch.h"
-#include "peeroperations.h"
+#include "peer/peerqr.h"
+#include "peer/peerglobalcallbacks.h"
+#include "peer/peerplayers.h"
+#include "peer/peerautomatch.h"
+#include "peer/peeroperations.h"
 
 /**************
 ** CALLBACKS **

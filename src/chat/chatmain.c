@@ -11,13 +11,13 @@ devsupport@gamespy.com
 /*************
 ** INCLUDES **
 *************/
-#include "chat.h"
-#include "chatmain.h"
-#include "chatascii.h"
-#include "chatsocket.h"
-#include "chathandlers.h"
-#include "chatchannel.h"
-#include "chatcallbacks.h"
+#include "chat/chat.h"
+#include "chat/chatmain.h"
+#include "chat/chatascii.h"
+#include "chat/chatsocket.h"
+#include "chat/chathandlers.h"
+#include "chat/chatchannel.h"
+#include "chat/chatcallbacks.h"
 
 #if defined(_WIN32)
 // Silence the warning about explicitly casting a function* to a void*

@@ -3,9 +3,9 @@ INCLUDES
 ********/
 #include "gscommon.h"
 #include "gsavailable.h"
-#include "qr2.h"
-#include "qr2regkeys.h"
-#include "natneg.h"
+#include "qr2/qr2.h"
+#include "qr2/qr2regkeys.h"
+#include "natneg/natneg.h"
 
 #ifdef __cplusplus
 extern "C" {

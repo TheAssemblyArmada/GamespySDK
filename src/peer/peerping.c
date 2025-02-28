@@ -13,11 +13,11 @@ devsupport@gamespy.com
 *************/
 #include <stdlib.h>
 #include <stdio.h>
-#include "peerplayers.h"
-#include "peerping.h"
-#include "peerglobalcallbacks.h"
-#include "peercallbacks.h"
-#include "peermangle.h"
+#include "peer/peerplayers.h"
+#include "peer/peerping.h"
+#include "peer/peerglobalcallbacks.h"
+#include "peer/peercallbacks.h"
+#include "peer/peermangle.h"
 
 /************
 ** DEFINES **

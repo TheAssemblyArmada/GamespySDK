@@ -1,5 +1,5 @@
-#include "sb_internal.h"
-#include "sb_ascii.h"
+#include "serverbrowsing/sb_internal.h"
+#include "serverbrowsing/sb_ascii.h"
 
 //for the unique value list
 #if defined(_NITRO)

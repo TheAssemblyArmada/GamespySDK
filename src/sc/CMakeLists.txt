@@ -1,16 +1,16 @@
 add_library(gssc OBJECT)
 target_sources(gssc PRIVATE
-    ${PROJECT_SOURCE_DIR}/include/gamespy/sc.h
-    ${PROJECT_SOURCE_DIR}/include/gamespy/sci.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sc/sc.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sc/sci.h
     sciinterface.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/sciinterface.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sc/sciinterface.h
     scimain.c
     scireport.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/scireport.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sc/scireport.h
     sciserialize.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/sciserialize.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sc/sciserialize.h
     sciwebservices.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/sciwebservices.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/sc/sciwebservices.h
 )
 
 target_link_libraries(gssc PUBLIC gsinterface)

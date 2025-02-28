@@ -2,10 +2,10 @@
 ///////////////////////////////////////////////////////////////////////////////
 // gSOAP Glue
 #include "gscore.h"
-#include "gssoap.h"
+#include "ghttp/gssoap.h"
 #include "gsplatformthread.h"
 #include "gsxml.h"
-#include "ghttpascii.h"
+#include "ghttp/ghttpascii.h"
 
 // GAMESPY DEVELOPERS ->  Use gsiExecuteSoap
 

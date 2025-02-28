@@ -9,22 +9,22 @@ devsupport@gamespy.com
 http://gamespy.net
 */
 
-#include "gvmain.h"
-#include "gvcodec.h"
-#include "gvsource.h"
-#include "gvframe.h"
-#include "gvcustomdevice.h"
+#include "voice2/gvmain.h"
+#include "voice2/gvcodec.h"
+#include "voice2/gvsource.h"
+#include "voice2/gvframe.h"
+#include "voice2/gvcustomdevice.h"
 #if !defined(GV_NO_DEFAULT_HARDWARE)
 #if defined(_WIN32)
-#include "gvdirectsound.h"
+#include "voice2/gvdirectsound.h"
 #elif defined(_PS2)
-#include "gvps2audio.h"
+#include "voice2/gvps2audio.h"
 #elif defined(__APPLE__) && defined(__MACH__)
-#include "gvosxaudio.h"
+#include "voice2/gvosxaudio.h"
 #elif defined(_PSP)
-#include "gvpspaudio.h"
+#include "voice2/gvpspaudio.h"
 #elif defined(_PS3)
-#include "gvps3audio.h"
+#include "voice2/gvps3audio.h"
 #else
 #error There is no default hardware support on this platform.  Define GV_NO_DEFAULT_HARDWARE to compile without default hardware support.
 #endif
