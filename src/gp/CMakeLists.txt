@@ -1,37 +1,37 @@
 add_library(gsgp OBJECT)
 target_sources(gsgp PRIVATE
     gp.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gp.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gp.h
     gpi.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpi.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpi.h
     gpibuddy.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpibuddy.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpibuddy.h
     gpibuffer.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpibuffer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpibuffer.h
     gpicallback.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpicallback.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpicallback.h
     gpiconnect.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiconnect.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpiconnect.h
     gpiinfo.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiinfo.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpiinfo.h
     gpikeys.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpikeys.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpikeys.h
     gpioperation.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpioperation.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpioperation.h
     gpipeer.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpipeer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpipeer.h
     gpiprofile.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiprofile.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpiprofile.h
     gpips3.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpips3.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpips3.h
     gpisearch.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpisearch.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpisearch.h
     gpitransfer.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpitransfer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpitransfer.h
     gpiunique.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiunique.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpiunique.h
     gpiutility.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gpiutility.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gp/gpiutility.h
 )
 
 target_link_libraries(gsgp PUBLIC gsinterface)

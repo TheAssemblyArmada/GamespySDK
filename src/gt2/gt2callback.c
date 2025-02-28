@@ -8,8 +8,8 @@ Copyright 2002 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "gt2callback.h"
-#include "gt2socket.h"
+#include "gt2/gt2callback.h"
+#include "gt2/gt2socket.h"
 
 /*********************
 ** SOCKET CALLBACKS **

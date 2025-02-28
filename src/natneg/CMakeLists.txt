@@ -1,10 +1,10 @@
 add_library(gsnatneg OBJECT)
 target_sources(gsnatneg PRIVATE
     natify.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/natify.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/natneg/natify.h
     natneg.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/natneg.h
-    ${PROJECT_SOURCE_DIR}/include/gamespy/nninternal.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/natneg/natneg.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/natneg/nninternal.h
 )
 
 target_link_libraries(gsnatneg PUBLIC gsinterface)

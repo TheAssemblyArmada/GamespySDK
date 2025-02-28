@@ -13,10 +13,10 @@ devsupport@gamespy.com
 *************/
 #include <string.h>
 #include <stdlib.h>
-#include "peer.h"
-#include "peermain.h"
-#include "peercallbacks.h"
-#include "peeroperations.h"
+#include "peer/peer.h"
+#include "peer/peermain.h"
+#include "peer/peercallbacks.h"
+#include "peer/peeroperations.h"
 
 /************
 ** DEFINES **

@@ -1,6 +1,6 @@
 #include <stddef.h>
-#include "nninternal.h"
-#include "natify.h"
+#include "natneg/nninternal.h"
+#include "natneg/natify.h"
 
 gsi_bool gotERT1, gotERT2, gotERT3;
 gsi_bool gotADDRESS1a, gotADDRESS1b, gotADDRESS2, gotADDRESS3;

@@ -1,13 +1,13 @@
-#include "gvcodec.h"
-#include "gvframe.h"
+#include "voice2/gvcodec.h"
+#include "voice2/gvframe.h"
 
 #if !defined(GV_NO_DEFAULT_CODEC)
 #if defined(_PS2)
-#include "gvlogitechps2codecs.h"
+#include "voice2/gvlogitechps2codecs.h"
 #elif defined(_PSP)
-#include "gvgsm.h"
+#include "voice2/gvgsm.h"
 #else
-#include "gvspeex.h"
+#include "voice2/gvspeex.h"
 #endif
 #endif
 

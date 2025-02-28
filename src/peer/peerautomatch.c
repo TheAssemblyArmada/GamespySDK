@@ -11,14 +11,14 @@ devsupport@gamespy.com
 /*************
 ** INCLUDES **
 *************/
-#include "peerautomatch.h"
-#include "peermangle.h"
-#include "peeroperations.h"
-#include "peersb.h"
-#include "peerqr.h"
-#include "peercallbacks.h"
-#include "peerplayers.h"
-#include "peerrooms.h"
+#include "peer/peerautomatch.h"
+#include "peer/peermangle.h"
+#include "peer/peeroperations.h"
+#include "peer/peersb.h"
+#include "peer/peerqr.h"
+#include "peer/peercallbacks.h"
+#include "peer/peerplayers.h"
+#include "peer/peerrooms.h"
 
 /**************
 ** FUNCTIONS **

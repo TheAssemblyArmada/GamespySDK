@@ -1,11 +1,11 @@
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
-#include "gvps3headset.h"
+#include "voice2/gvps3headset.h"
 #if !defined(GV_NO_PS3_HEADSET)
-#include "gvdevice.h"
-#include "gvcodec.h"
-#include "gvsource.h"
-#include "gvutil.h"
+#include "voice2/gvdevice.h"
+#include "voice2/gvcodec.h"
+#include "voice2/gvsource.h"
+#include "voice2/gvutil.h"
 #include <types.h>
 #include <sys/event.h>
 #include <cell/audio.h>

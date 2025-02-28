@@ -5,7 +5,7 @@
 /*************
 ** INCLUDES **
 *************/
-#include "chat.h"
+#include "chat/chat.h"
 #include "gsstringutil.h"
 
 #ifdef UNDER_CE

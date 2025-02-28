@@ -28,8 +28,8 @@ devsupport@gamespy.com
 ** INCLUDES **
 *************/
 #include <limits.h>
-#include "peermain.h"
-#include "peermangle.h"
+#include "peer/peermain.h"
+#include "peer/peermangle.h"
 
 /************
 ** DEFINES **

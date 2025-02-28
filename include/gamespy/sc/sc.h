@@ -8,8 +8,8 @@
 #include "gscommon.h"
 #include "gsrc4.h"
 #include "gsavailable.h"
-#include "ghttp.h"
-#include "authservice.h"
+#include "../ghttp/ghttp.h"
+#include "../webservices/authservice.h"
 
 #ifdef __cplusplus
 extern "C" {

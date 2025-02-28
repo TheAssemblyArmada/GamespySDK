@@ -1,5 +1,5 @@
-#include "sb_serverbrowsing.h"
-#include "sb_internal.h"
+#include "serverbrowsing/sb_serverbrowsing.h"
+#include "serverbrowsing/sb_internal.h"
 
 #ifdef GSI_MANIC_DEBUG
 // Make sure the server isn't already in the fifo

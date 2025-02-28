@@ -8,13 +8,13 @@ Copyright 2002 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "gt2main.h"
-#include "gt2socket.h"
-#include "gt2connection.h"
-#include "gt2message.h"
-#include "gt2callback.h"
-#include "gt2filter.h"
-#include "gt2utility.h"
+#include "gt2/gt2main.h"
+#include "gt2/gt2socket.h"
+#include "gt2/gt2connection.h"
+#include "gt2/gt2message.h"
+#include "gt2/gt2callback.h"
+#include "gt2/gt2filter.h"
+#include "gt2/gt2utility.h"
 
 #define GTI2_INVALID_IP_MASK 0xE0000000
 

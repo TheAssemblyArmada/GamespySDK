@@ -8,10 +8,10 @@ Copyright 1999-2007 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "ghttppost.h"
-#include "ghttpmain.h"
-#include "ghttpconnection.h"
-#include "ghttpcommon.h"
+#include "ghttp/ghttppost.h"
+#include "ghttp/ghttpmain.h"
+#include "ghttp/ghttpconnection.h"
+#include "ghttp/ghttpcommon.h"
 
 #include "gscrypt.h"
 #include "gsssl.h"

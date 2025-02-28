@@ -1,7 +1,7 @@
-#include "gvcustomdevice.h"
-#include "gvsource.h"
-#include "gvcodec.h"
-#include "gvutil.h"
+#include "voice2/gvcustomdevice.h"
+#include "voice2/gvsource.h"
+#include "voice2/gvcodec.h"
+#include "voice2/gvutil.h"
 
 #define GVI_DEFAULT_THRESHOLD ((GVScalar)0.0)
 

@@ -1,5 +1,5 @@
-#include "gvframe.h"
-#include "gvcodec.h"
+#include "voice2/gvframe.h"
+#include "voice2/gvcodec.h"
 
 // packets are only accepted if they are frameStamped to be played
 // within this many frames from the current play clock

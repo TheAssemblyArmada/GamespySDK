@@ -1,6 +1,6 @@
-#include "gvspeex.h"
+#include "voice2/gvspeex.h"
 #include <speex/speex.h>
-#include "gvcodec.h"
+#include "voice2/gvcodec.h"
 
 static GVBool gviSpeexInitialized;
 static void* gviSpeexEncoderState;

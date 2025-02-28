@@ -1,33 +1,33 @@
 add_library(gspeer OBJECT)
 target_sources(gspeer PRIVATE
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peer.h
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerascii.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peer.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerascii.h
     peerautomatch.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerautomatch.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerautomatch.h
     peercallbacks.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peercallbacks.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peercallbacks.h
     peerglobalcallbacks.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerglobalcallbacks.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerglobalcallbacks.h
     peerhost.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerhost.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerhost.h
     peerkeys.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerkeys.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerkeys.h
     peermain.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peermain.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peermain.h
     peermangle.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peermangle.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peermangle.h
     peeroperations.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peeroperations.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peeroperations.h
     peerping.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerping.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerping.h
     peerplayers.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerplayers.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerplayers.h
     peerqr.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerqr.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerqr.h
     peerrooms.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peerrooms.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peerrooms.h
     peersb.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/peersb.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/peer/peersb.h
 )
 
 target_link_libraries(gspeer PUBLIC gsinterface)

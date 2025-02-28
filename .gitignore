@@ -36,3 +36,4 @@ CPackSourceConfig.cmake
 thumbs.db
 /CMakeUserPresets.json
 /.cache
+/.vscode

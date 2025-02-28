@@ -24,6 +24,7 @@ endif()
 add_subdirectory(common)
 add_subdirectory(chat)
 add_subdirectory(natneg)
+add_subdirectory(qr)
 add_subdirectory(qr2)
 add_subdirectory(gcdkey)
 add_subdirectory(ghttp)
@@ -42,6 +43,7 @@ set(GAMESPY_MODULES
     gscommon
     gschat
     gsnatneg
+    gsqr
     gsqr2
     gscdkey
     gshttp

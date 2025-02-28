@@ -57,7 +57,7 @@ you can simply pass in NULL.
 *********/
 #ifdef QR2CDKEY_INTEGRATION
 
-#include "qr2.h"
+#include "../qr2/qr2.h"
 int gcd_init_qr2(qr2_t qrec, int gameid);
 
 #endif

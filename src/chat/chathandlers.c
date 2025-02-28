@@ -15,12 +15,12 @@ devsupport@gamespy.com
 #include <string.h>
 #include <stdlib.h>
 #include <limits.h>
-#include "chatmain.h"
-#include "chatsocket.h"
-#include "chathandlers.h"
-#include "chatchannel.h"
-#include "chatcallbacks.h"
-#include "chatcrypt.h"
+#include "chat/chatmain.h"
+#include "chat/chatsocket.h"
+#include "chat/chathandlers.h"
+#include "chat/chatchannel.h"
+#include "chat/chatcallbacks.h"
+#include "chat/chatcrypt.h"
 
 #if defined(_WIN32)
 // Silence the cast function* to void* warning.

@@ -8,8 +8,8 @@ Copyright 1999-2007 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "ghttpcallbacks.h"
-#include "ghttppost.h"
+#include "ghttp/ghttpcallbacks.h"
+#include "ghttp/ghttppost.h"
 
 void ghiCallCompletedCallback(GHIConnection* connection)
 {

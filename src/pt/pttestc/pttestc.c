@@ -1,5 +1,5 @@
-#include "pt.h"
-#include "ghttp.h"
+#include "pt/pt.h"
+#include "ghttp/ghttp.h"
 #include "gsavailable.h"
 #include "gsstringutil.h"
 

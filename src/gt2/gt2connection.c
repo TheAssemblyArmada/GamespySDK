@@ -8,11 +8,11 @@ Copyright 2002 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "gt2connection.h"
-#include "gt2socket.h"
-#include "gt2message.h"
-#include "gt2callback.h"
-#include "gt2utility.h"
+#include "gt2/gt2connection.h"
+#include "gt2/gt2socket.h"
+#include "gt2/gt2message.h"
+#include "gt2/gt2callback.h"
+#include "gt2/gt2utility.h"
 #include <stdlib.h>
 
 GT2Result gti2NewOutgoingConnection(GT2Socket socket, GT2Connection* connection, unsigned int ip, unsigned short port)

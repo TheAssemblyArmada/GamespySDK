@@ -12,7 +12,7 @@ devsupport@gamespy.com
 INCLUDES
 ********/
 #include "gscommon.h"
-#include "gbucket.h"
+#include "gstats/gbucket.h"
 #include "hashtable.h"
 #include <ctype.h>
 

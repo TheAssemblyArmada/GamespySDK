@@ -18,7 +18,7 @@ Please see the GameSpy Presence SDK documentation for more information
 #include <sys/stat.h>
 #endif
 #include <string.h>
-#include "gpi.h"
+#include "gp/gpi.h"
 
 #define GPI_TRANSFER_VERSION  1
 #define GPI_PEER_TIMEOUT_TIME (1 * 60000)

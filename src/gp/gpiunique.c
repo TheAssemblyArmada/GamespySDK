@@ -13,7 +13,7 @@ Please see the GameSpy Presence SDK documentation for more information
 
 //INCLUDES
 //////////
-#include "gpi.h"
+#include "gp/gpi.h"
 
 //FUNCTIONS
 ///////////

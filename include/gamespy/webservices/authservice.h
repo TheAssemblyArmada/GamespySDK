@@ -7,7 +7,7 @@
 //
 // ***** PUBLIC INTERFACE AT THE BOTTOM OF THE FILE
 
-#include "gssoap.h"
+#include "../ghttp/gssoap.h"
 #include "gscrypt.h"
 #include "gslargeint.h"
 

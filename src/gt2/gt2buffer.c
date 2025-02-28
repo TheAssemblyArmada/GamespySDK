@@ -8,7 +8,7 @@ Copyright 2002 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "gt2buffer.h"
+#include "gt2/gt2buffer.h"
 #include <stdlib.h>
 
 GT2Bool gti2AllocateBuffer(GTI2Buffer* buffer, int size)

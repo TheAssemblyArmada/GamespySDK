@@ -14,8 +14,8 @@ Please see the GameSpy Stats and Tracking SDK documentation for more info
 /********
 INCLUDES
 ********/
-#include "gstats.h"
-#include "gpersist.h"
+#include "gstats/gstats.h"
+#include "gstats/gpersist.h"
 #include "gsavailable.h"
 #include "darray.h"
 #include "md5.h"

@@ -3,8 +3,8 @@
 #include "gscommon.h"
 #include "gscore.h"
 #include "gsavailable.h"
-#include "authservice.h"
-#include "sc.h"
+#include "webservices/authservice.h"
+#include "sc/sc.h"
 
 #include <float.h>
 

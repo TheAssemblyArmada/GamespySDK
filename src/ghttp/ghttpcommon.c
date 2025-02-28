@@ -8,7 +8,7 @@ Copyright 1999-2007 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "ghttpcommon.h"
+#include "ghttp/ghttpcommon.h"
 
 // Disable compiler warnings for issues that are unavoidable.
 /////////////////////////////////////////////////////////////

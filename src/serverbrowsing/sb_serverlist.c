@@ -1,6 +1,6 @@
-#include "sb_serverbrowsing.h"
-#include "sb_internal.h"
-#include "sb_ascii.h"
+#include "serverbrowsing/sb_serverbrowsing.h"
+#include "serverbrowsing/sb_internal.h"
+#include "serverbrowsing/sb_ascii.h"
 
 #define SERVER_GROWBY 100
 

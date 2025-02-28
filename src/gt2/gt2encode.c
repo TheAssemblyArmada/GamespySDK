@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <string.h>
-#include "gt2encode.h"
-#include "gt2main.h"
+#include "gt2/gt2encode.h"
+#include "gt2/gt2main.h"
 
 // This handles alignment issues and endianess
 void gt2MemCopy16(char* out, char const* in)

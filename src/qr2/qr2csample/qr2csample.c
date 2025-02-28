@@ -16,7 +16,7 @@ devsupport@gamespy.com
 /********
 INCLUDES
 ********/
-#include "qr2.h"
+#include "qr2/qr2.h"
 
 /********
 DEFINES

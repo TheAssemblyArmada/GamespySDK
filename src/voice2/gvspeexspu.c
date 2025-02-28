@@ -1,6 +1,6 @@
-#include "gvspeexspu.h"
+#include "voice2/gvspeexspu.h"
 #include <speex.h>
-#include "gvcodec.h"
+#include "voice2/gvcodec.h"
 
 #define GVI_SPEEX_ENCODED_BUFFER 128 //dma has trouble when smaller than
 struct SpursSpeexTaskOutput gSpeexTaskOutput;

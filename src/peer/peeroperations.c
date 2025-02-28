@@ -15,17 +15,17 @@ devsupport@gamespy.com
 #include <stdio.h>
 #include <limits.h>
 #include <stdlib.h>
-#include "peeroperations.h"
-#include "peercallbacks.h"
-#include "peerglobalcallbacks.h"
-#include "peermangle.h"
-#include "peerrooms.h"
-#include "peerplayers.h"
-#include "peerkeys.h"
-#include "peersb.h"
-#include "peerhost.h"
-#include "peerautomatch.h"
-#include "peerqr.h"
+#include "peer/peeroperations.h"
+#include "peer/peercallbacks.h"
+#include "peer/peerglobalcallbacks.h"
+#include "peer/peermangle.h"
+#include "peer/peerrooms.h"
+#include "peer/peerplayers.h"
+#include "peer/peerkeys.h"
+#include "peer/peersb.h"
+#include "peer/peerhost.h"
+#include "peer/peerautomatch.h"
+#include "peer/peerqr.h"
 #include "md5.h"
 
 /************

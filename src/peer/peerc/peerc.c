@@ -5,7 +5,7 @@
 /*********
 INCLUDES 
 *********/
-#include "peer.h"
+#include "peer/peer.h"
 #include "gsstringutil.h"
 #include "gsavailable.h"
 

@@ -1,9 +1,9 @@
 add_library(gscdkey OBJECT)
 target_sources(gscdkey PRIVATE
     gcdkeyc.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gcdkeyc.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gcdkey/gcdkeyc.h
     gcdkeys.c
-    ${PROJECT_SOURCE_DIR}/include/gamespy/gcdkeys.h
+    ${PROJECT_SOURCE_DIR}/include/gamespy/gcdkey/gcdkeys.h
 )
 
 target_link_libraries(gscdkey PUBLIC gsinterface)

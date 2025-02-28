@@ -1,8 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include "gt2.h"
-#include "gt2encode.h"
+#include "gt2/gt2.h"
+#include "gt2/gt2encode.h"
 
 #define TEST_ENCODE_DECODE
 

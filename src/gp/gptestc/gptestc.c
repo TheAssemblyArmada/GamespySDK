@@ -1,4 +1,4 @@
-#include "gp.h"
+#include "gp/gp.h"
 #include "gsavailable.h"
 
 #if defined(_WIN32) && !defined(UNDER_CE)

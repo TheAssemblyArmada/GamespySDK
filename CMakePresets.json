@@ -14,6 +14,8 @@
             "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+                "CMAKE_MSVC_DEBUG_INFORMATION_FORMAT": "$<$<CONFIG:Release,Debug,RelWithDebInfo>:ProgramDatabase>",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL",
                 "GS_OPENSSL": "ON",
                 "GS_HTTPLOG": "OFF",
                 "GS_SECURESECONNECT": "ON",
@@ -27,11 +29,6 @@
             "hidden": false,
             "displayName": "Windows builds",
             "cacheVariables": {
-                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL",
-                "CMAKE_CXX_FLAGS_RELEASE": "/Zi /O2 /Ob2 /DNDEBUG",
-                "CMAKE_EXE_LINKER_FLAGS_RELEASE": "/debug:full /INCREMENTAL:NO",
-                "CMAKE_MODULE_LINKER_FLAGS_RELEASE": "/debug:full /INCREMENTAL:NO",
-                "CMAKE_SHARED_LINKER_FLAGS_RELEASE": "/debug:full /INCREMENTAL:NO",
                 "GS_C_FLAGS": "/Zc:strictStrings;/W3"
             }
         },

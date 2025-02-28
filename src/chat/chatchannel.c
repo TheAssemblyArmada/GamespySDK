@@ -14,9 +14,9 @@ devsupport@gamespy.com
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include "chatmain.h"
-#include "chatchannel.h"
-#include "chatcallbacks.h"
+#include "chat/chatmain.h"
+#include "chat/chatchannel.h"
+#include "chat/chatcallbacks.h"
 
 #if defined(_WIN32)
 // Compiler warns when explicitly casting from function* to void*

@@ -1,10 +1,10 @@
 #include "gscommon.h"
 #include "gsavailable.h"
 #include "gscore.h"
-#include "gssoap.h"
-#include "sake.h"
-#include "ghttp.h"
-#include "gp.h"
+#include "ghttp/gssoap.h"
+#include "sake/sake.h"
+#include "ghttp/ghttp.h"
+#include "gp/gp.h"
 
 #if defined(_NITRO)
 #include "nitro/screen.h"

@@ -15,9 +15,9 @@ devsupport@gamespy.com
 ** INCLUDES **
 *************/
 #include "gscommon.h"
-#include "chat.h"
-#include "qr2.h"
-#include "sb_internal.h"
+#include "../chat/chat.h"
+#include "../qr2/qr2.h"
+#include "../serverbrowsing/sb_internal.h"
 
 #ifdef __cplusplus
 extern "C" {

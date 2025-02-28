@@ -8,10 +8,10 @@ Copyright 2002 GameSpy Industries, Inc
 devsupport@gamespy.com
 */
 
-#include "gt2filter.h"
-#include "gt2callback.h"
-#include "gt2message.h"
-#include "gt2utility.h"
+#include "gt2/gt2filter.h"
+#include "gt2/gt2callback.h"
+#include "gt2/gt2message.h"
+#include "gt2/gt2utility.h"
 
 static int GS_STATIC_CALLBACK gti2SendFiltersCompare(const void* elem1, const void* elem2)
 {

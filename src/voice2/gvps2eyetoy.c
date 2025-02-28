@@ -1,9 +1,9 @@
-#include "gvps2eyetoy.h"
+#include "voice2/gvps2eyetoy.h"
 #if !defined(GV_NO_PS2_EYETOY)
-#include "gvdevice.h"
-#include "gvcodec.h"
-#include "gvsource.h"
-#include "gvutil.h"
+#include "voice2/gvdevice.h"
+#include "voice2/gvcodec.h"
+#include "voice2/gvsource.h"
+#include "voice2/gvutil.h"
 #include <liblgvid.h>
 
 #if !defined(_PS2)

@@ -1,9 +1,9 @@
-#include "nninternal.h"
+#include "natneg/nninternal.h"
 #include "darray.h"
 #include "gsavailable.h"
 #include <stddef.h>
 #include <stdio.h>
-#include "natify.h"
+#include "natneg/natify.h"
 
 unsigned char NNMagicData[] = {NN_MAGIC_0, NN_MAGIC_1, NN_MAGIC_2, NN_MAGIC_3, NN_MAGIC_4, NN_MAGIC_5};
 struct _NATNegotiator

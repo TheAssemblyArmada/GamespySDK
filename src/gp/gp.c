@@ -15,7 +15,7 @@ Please see the GameSpy Presence SDK documentation for more information
 //////////
 #include <stdlib.h>
 #include <string.h>
-#include "gpi.h"
+#include "gp/gpi.h"
 
 //FUNCTIONS
 ///////////
