@@ -119,26 +119,6 @@ typedef enum
     qtsecure
 } query_t;
 
-struct qr_implementation_s
-{
-    SOCKET querysock;
-    SOCKET hbsock;
-    char gamename[64];
-    char secret_key[128];
-    qr_querycallback_t qr_basic_callback;
-    qr_querycallback_t qr_info_callback;
-    qr_querycallback_t qr_rules_callback;
-    qr_querycallback_t qr_players_callback;
-    unsigned long lastheartbeat;
-    int queryid;
-    int packetnumber;
-    int qport;
-    char no_query;
-    struct sockaddr_in hbaddr;
-    cdkey_process_t cdkeyprocess;
-    void* udata;
-};
-
 /********
 VARS
 ********/

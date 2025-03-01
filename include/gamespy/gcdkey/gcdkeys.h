@@ -62,6 +62,9 @@ int gcd_init_qr2(qr2_t qrec, int gameid);
 
 #endif
 
+#include "../qr/gqueryreporting.h"
+int gcd_init_qr(qr_t qrec, int productid);
+
 /********
 gcd_shutdown
 Frees the socket and client structures

@@ -120,7 +120,7 @@ static void process_ucount(char* buf, struct sockaddr_in* fromaddr);
 static void send_uon(int skey, const char* ignored, const char* proof, struct sockaddr_in* fromaddr);
 static void free_client_node(gsnode_t* node);
 
-static int get_sockaddrin(char* host, int port, struct sockaddr_in* saddr, struct hostent** savehent);
+//static int get_sockaddrin(char* host, int port, struct sockaddr_in* saddr, struct hostent** savehent);
 static void xcode_buf(char* buf, int len);
 static char* value_for_key(const char* s, const char* key);
 
@@ -169,6 +169,26 @@ int gcd_init(int gameid)
     }
 
     return gcd_init_common(gameid);
+}
+
+extern struct qr_implementation_s static_rec;
+int gcd_init_qr(qr_t qrec, int productid)
+{
+	if (qrec == NULL)
+		qrec = &static_rec;
+
+	localport = (unsigned short)-1; /* we don't process any incoming data ourselves - it gets passed from the QR SDK */
+
+	sock = qrec->querysock; 
+	qrec->cdkeyprocess = cdkey_process_buf;
+	/* grab the outgoing address from the QR SDK */
+	memset(&valaddr,0,sizeof(struct sockaddr_in));
+	valaddr.sin_family = AF_INET;
+	valaddr.sin_port = htons((unsigned short)VAL_PORT);
+	valaddr.sin_addr.s_addr = qrec->hbaddr.sin_addr.s_addr;
+	gcd_init_common(productid);
+	return 0;
+	
 }
 
 #ifdef QR2CDKEY_INTEGRATION
@@ -880,32 +900,32 @@ static void xcode_buf(char* buf, int len)
     }
 }
 
-/* Return a sockaddrin for the given host (numeric or DNS) and port)
-Returns the hostent in savehent if it is not NULL */
-static int get_sockaddrin(char* host, int port, struct sockaddr_in* saddr, struct hostent** savehent)
-{
-    struct hostent* hent = NULL;
-    char broadcast_t[] = {
-        '2', '5', '5', '.', '2', '5', '5', '.', '2', '5', '5', '.', '2', '5', '5', '\0'}; //255.255.255.255
-
-    memset(saddr, 0, sizeof(struct sockaddr_in));
-    saddr->sin_family = AF_INET;
-    saddr->sin_port = htons((unsigned short)port);
-    if (host == NULL)
-        saddr->sin_addr.s_addr = INADDR_ANY;
-    else
-        saddr->sin_addr.s_addr = inet_addr(host);
-
-    if (saddr->sin_addr.s_addr == INADDR_NONE && strcmp(host, broadcast_t) != 0) {
-        hent = gethostbyname(host);
-        if (!hent)
-            return 0;
-        saddr->sin_addr.s_addr = *(u_long*)hent->h_addr_list[0];
-    }
-    if (savehent != NULL)
-        *savehent = hent;
-    return 1;
-}
+///* Return a sockaddrin for the given host (numeric or DNS) and port)
+//Returns the hostent in savehent if it is not NULL */
+//static int get_sockaddrin(char* host, int port, struct sockaddr_in* saddr, struct hostent** savehent)
+//{
+//    struct hostent* hent = NULL;
+//    char broadcast_t[] = {
+//        '2', '5', '5', '.', '2', '5', '5', '.', '2', '5', '5', '.', '2', '5', '5', '\0'}; //255.255.255.255
+//
+//    memset(saddr, 0, sizeof(struct sockaddr_in));
+//    saddr->sin_family = AF_INET;
+//    saddr->sin_port = htons((unsigned short)port);
+//    if (host == NULL)
+//        saddr->sin_addr.s_addr = INADDR_ANY;
+//    else
+//        saddr->sin_addr.s_addr = inet_addr(host);
+//
+//    if (saddr->sin_addr.s_addr == INADDR_NONE && strcmp(host, broadcast_t) != 0) {
+//        hent = gethostbyname(host);
+//        if (!hent)
+//            return 0;
+//        saddr->sin_addr.s_addr = *(u_long*)hent->h_addr_list[0];
+//    }
+//    if (savehent != NULL)
+//        *savehent = hent;
+//    return 1;
+//}
 
 static gsproduct_t* find_product(int gameid)
 {
