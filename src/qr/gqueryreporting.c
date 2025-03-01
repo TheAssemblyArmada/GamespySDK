@@ -157,7 +157,6 @@ PROTOTYPES
 ********/
 static void send_heartbeat(qr_t qrec, int statechanged);
 static void qr_parse_query(qr_t qrec, char* query, int len, struct sockaddr* sender);
-static int get_sockaddrin(const char* host, int port, struct sockaddr_in* saddr, struct hostent** savehent);
 static int do_connect(SOCKET sock, char* addr, int port, struct sockaddr_in* hbaddr);
 void qr_check_queries(qr_t qrec);
 void qr_check_send_heartbeat(qr_t qrec);
@@ -454,7 +453,7 @@ static int do_connect(SOCKET sock, char* addr, int port, struct sockaddr_in* hba
 
 /* Return a sockaddrin for the given host (numeric or DNS) and port)
 Returns the hostent in savehent if it is not NULL */
-static int get_sockaddrin(const char* host, int port, struct sockaddr_in* saddr, struct hostent** savehent)
+int get_sockaddrin(const char* host, int port, struct sockaddr_in* saddr, struct hostent** savehent)
 {
     struct hostent* hent;
     char broadcast_t[] = {

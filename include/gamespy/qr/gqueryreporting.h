@@ -162,6 +162,16 @@ void qr_check_queries(qr_t qrec);
 
 typedef void (*cdkey_process_t)(char* buf, int len, struct sockaddr* fromaddr);
 
+void qr_send_exiting(qr_t qrec);
+
+int get_master_count();
+
+void clear_master_list();
+
+int get_sockaddrin(const char *host, int port, struct sockaddr_in *saddr, struct hostent **savehent);
+
+void add_master(struct sockaddr_in *addr);
+
 #ifdef __cplusplus
 }
 #endif
