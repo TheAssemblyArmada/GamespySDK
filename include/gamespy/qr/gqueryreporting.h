@@ -66,6 +66,8 @@ outbuf should be a NULL terminated ANSI string.
 ********/
 typedef void (*qr_querycallback_t)(char* outbuf, int maxlen, void* userdata);
 
+typedef void (*cdkey_process_t)(char* buf, int len, struct sockaddr* fromaddr);
+
 /***********
 qr_t
 ----
@@ -76,8 +78,25 @@ For most games, you can ignore this value and pass NULL in to all functions
 that require it. A single global instance will be used, similar to how the
 original Developer SDK worked
 ************/
-typedef struct qr_implementation_s* qr_t;
-
+typedef struct qr_implementation_s
+{
+    SOCKET querysock;
+    SOCKET hbsock;
+    char gamename[64];
+    char secret_key[128];
+    qr_querycallback_t qr_basic_callback;
+    qr_querycallback_t qr_info_callback;
+    qr_querycallback_t qr_rules_callback;
+    qr_querycallback_t qr_players_callback;
+    unsigned long lastheartbeat;
+    int queryid;
+    int packetnumber;
+    int qport;
+    char no_query;
+    struct sockaddr_in hbaddr;
+    cdkey_process_t cdkeyprocess;
+    void* udata;
+}* qr_t;
 /************
 QR_INIT
 --------
@@ -159,8 +178,6 @@ NULL in here as well.
 void qr_shutdown(qr_t qrec);
 
 void qr_check_queries(qr_t qrec);
-
-typedef void (*cdkey_process_t)(char* buf, int len, struct sockaddr* fromaddr);
 
 void qr_send_exiting(qr_t qrec);
 
