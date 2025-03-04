@@ -161,6 +161,13 @@ qr2_error_t qr2_create_socket(/*[out]*/ SOCKET* sock, const char* ip, /*[in/out]
 /* PUBLIC FUNCTIONS */
 /****************************************************************************/
 
+// debugging
+int isQR2Hosting = 0;
+int getQR2HostingStatus(void)
+{
+	return isQR2Hosting;
+}
+
 /* qr2_init: Initializes the sockets, etc. Returns an error value
 if an error occured, or 0 otherwise */
 qr2_error_t qr2_init_socketA(/*[out]*/ qr2_t* qrec,
@@ -252,6 +259,9 @@ qr2_error_t qr2_init_socketA(/*[out]*/ qr2_t* qrec,
         }
     } else //don't need to look up
         ret = 1;
+
+    isQR2Hosting = (ret != 0); // debugging
+
     if (!ret) {
         gsDebugFormat(GSIDebugCat_QR2,
                       GSIDebugType_Misc,
@@ -641,6 +651,9 @@ void qr2_shutdown(qr2_t qrec)
         qrec = current_rec;
     if (qrec->ispublic)
         send_heartbeat(qrec, 2);
+
+    isQR2Hosting = 0; // debugging
+
     if (INVALID_SOCKET != qrec->hbsock && qrec->read_socket) //if we own the socket
     {
         closesocket(qrec->hbsock);

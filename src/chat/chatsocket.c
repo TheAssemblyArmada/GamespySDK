@@ -205,11 +205,24 @@ CHATBool ciSocketInit(ciSocket* sock, const char* nick)
     return CHATTrue;
 }
 
+// Save off the user's preferred address to use with a future connect().
+////////////////////////
+static unsigned long bindAddress = INADDR_ANY;
+void chatSetLocalIP(unsigned long preferredIP)
+{
+	bindAddress = preferredIP;
+}
+unsigned long chatGetLocalIP(void)
+{
+	return bindAddress;
+}
+
 CHATBool ciSocketConnect(ciSocket* sock, const char* serverAddress, int port)
 {
     unsigned int ip;
     HOSTENT* host;
     SOCKADDR_IN address;
+	SOCKADDR_IN localAddress;
     int rcode;
 
 #if !defined(INSOCK) && !defined(_NITRO) && !defined(_REVOLUTION)
@@ -248,6 +261,13 @@ CHATBool ciSocketConnect(ciSocket* sock, const char* serverAddress, int port)
     address.sin_addr.s_addr = ip;
     address.sin_port = htons((unsigned short)port);
 
+	// Setup the local address.
+	/////////////////////
+	memset(&localAddress, 0, sizeof(SOCKADDR_IN));
+	localAddress.sin_family = AF_INET;
+	localAddress.sin_addr.s_addr = htonl(bindAddress);
+	localAddress.sin_port = 0;
+
     // Create the socket.
     /////////////////////
     sock->sock = socket(AF_INET, SOCK_STREAM, 0);
@@ -261,6 +281,15 @@ CHATBool ciSocketConnect(ciSocket* sock, const char* serverAddress, int port)
     rcode = setsockopt(sock->sock, SOL_SOCKET, SO_KEEPALIVE, (char*)&keepalive, sizeof(int));
     //assert(gsiSocketIsNotError(rcode));
 #endif
+
+    // Try and bind.
+    ///////////////////
+    rcode = bind(sock->sock, (SOCKADDR *)&localAddress, sizeof(SOCKADDR_IN));
+    if(gsiSocketIsError(rcode))
+    {
+        closesocket(sock->sock);
+        return CHATFalse;
+    }
 
     // Try and connect.
     ///////////////////

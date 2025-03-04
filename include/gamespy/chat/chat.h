@@ -888,6 +888,10 @@ void chatGetBasicUserInfoA(CHAT chat,
 						  CHATBool blocking);
 */
 
+// Stuff that seems to be used by generals/zh
+void chatSetLocalIP(unsigned long preferredIP);
+unsigned long chatGetLocalIP(void);
+
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 #ifdef __cplusplus
