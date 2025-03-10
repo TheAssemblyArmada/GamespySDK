@@ -301,6 +301,9 @@ struct _SBServerList
 #ifndef SB_SERVER_DECLARED
 #define SB_SERVER_DECLARED
 
+struct HashImplementation;
+typedef struct HashImplementation* HashTable;
+
 struct _SBServer
 {
     goa_uint32 publicip;
