@@ -19,7 +19,8 @@
 #endif
 
 // Support all Linux compiler defines into one expected define
-#if !defined(_LINUX) && (defined(__linux__) || defined(__linux))
+// See https://github.com/cpredef/predef/blob/master/OperatingSystems.md
+#if !defined(_LINUX) && (defined(__linux__) || defined(__linux) || defined(linux))
 #define _LINUX
 #endif
 
