@@ -19,7 +19,7 @@
 #endif
 
 // Support all Linux compiler defines into one expected define
-#ifndef _LINUX && (defined(__linux__) || defined(__linux))
+#if !defined(_LINUX) && (defined(__linux__) || defined(__linux))
 #define _LINUX
 #endif
 
