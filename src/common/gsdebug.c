@@ -63,7 +63,7 @@ gsiDebugCallback(GSIDebugCategory category, GSIDebugType type, GSIDebugLevel lev
     vsprintf(string, format, params);
     OutputDebugStringA(string);
 
-#elif defined(_LINUX) || defined(_MACOSX)
+#elif defined(__linux__) || defined(_MACOSX)
     //static char    string[256];
     //vsprintf(string, format, params);
     vprintf(format, params);
