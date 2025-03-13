@@ -18,6 +18,11 @@
 #define UNIQUEID // enable unique id support
 #endif
 
+// Support all Linux compiler defines into one expected define
+#ifndef _LINUX && (defined(__linux__) || defined(__linux))
+#define _LINUX
+#endif
+
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 #include "gsplatform.h"
