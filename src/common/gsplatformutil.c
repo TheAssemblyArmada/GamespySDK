@@ -1706,7 +1706,11 @@ static void GenerateID(char* keyval)
     LARGE_INTEGER l1;
     UINT seed;
     if (QueryPerformanceCounter(&l1))
+#ifdef __MINGW32__
+        seed = (l1.u.LowPart ^ l1.u.HighPart);
+#else
         seed = (l1.LowPart ^ l1.HighPart);
+#endif
     else
         seed = 0;
     Util_RandSeed(seed ^ GetTickCount() ^ (unsigned long)time(NULL) ^ clock());
