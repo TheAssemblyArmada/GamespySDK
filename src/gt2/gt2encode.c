@@ -107,6 +107,16 @@ void gt2MemCopy(char* out, char const* in, int size)
 
 #else
 
+#ifdef __MINGW32__
+#define GT_ENCODE_ELEM(TYPE, b, l, args)                                                                               \
+    {                                                                                                                  \
+        if (l < sizeof(TYPE))                                                                                          \
+            return -1;                                                                                                 \
+        TYPE temp = va_arg(*args, TYPE);                                                                               \
+        gt2MemCopy(b, (const char*)&temp, sizeof(TYPE));                                                               \
+        return sizeof(TYPE);                                                                                           \
+    }
+#else
 #define GT_ENCODE_ELEM(TYPE, b, l, args)                                                                               \
     {                                                                                                                  \
         if (l < sizeof(TYPE))                                                                                          \
@@ -114,6 +124,7 @@ void gt2MemCopy(char* out, char const* in, int size)
         gt2MemCopy(b, (const char*)&va_arg(*args, TYPE), sizeof(TYPE));                                                \
         return sizeof(TYPE);                                                                                           \
     }
+#endif
 #define GT_DECODE_ELEM(TYPE, b, l, args)                                                                               \
     {                                                                                                                  \
         if (l < sizeof(TYPE))                                                                                          \
