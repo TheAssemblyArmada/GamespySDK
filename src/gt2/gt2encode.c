@@ -63,7 +63,7 @@ void gt2MemCopy(char* out, char const* in, int size)
         memcpy(out, in, (size_t)size);
     }
 }
-#if defined(_PS2) || defined(_UNIX) || defined(_PS3) || defined(_WIN64) || defined(_X360)
+#if defined(_PS2) || defined(_UNIX) || defined(_PS3) || defined(_WIN64) || defined(_X360) || defined(__GNUC__)
 
 #define GT_ENCODE_ELEM(TYPE, b, l, args)                                                                               \
     {                                                                                                                  \
