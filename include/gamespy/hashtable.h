@@ -1,5 +1,5 @@
-#ifndef _HASHTABLE_H
-#define _HASHTABLE_H
+#ifndef _GS_HASHTABLE_H
+#define _GS_HASHTABLE_H
 
 /* File: hashtable.h
  * ------------------
@@ -219,4 +219,4 @@ void TableClear(HashTable table);
 }
 #endif
 
-#endif //_HASHTABLE_H
+#endif //_GS_HASHTABLE_H
