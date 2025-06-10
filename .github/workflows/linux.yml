@@ -12,7 +12,7 @@ jobs:
     strategy:
       matrix:
         cc: [clang, gcc]
-        os: [ubuntu-20.04, ubuntu-24.04]
+        os: [ubuntu-22.04, ubuntu-24.04]
         include:
           - cc: clang
             cxx: clang++
