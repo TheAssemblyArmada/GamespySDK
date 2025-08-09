@@ -79,6 +79,13 @@ if(BUILD_SHARED_LIBS)
     set_target_properties(gamespy PROPERTIES ARCHIVE_OUTPUT_NAME gamespy_import WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
 
+# Handle including sockets library headers for consumers.
+if(WIN32 OR "${CMAKE_SYSTEM}" MATCHES "Windows")
+    if(GS_WINSOCK2)
+        target_compile_definitions(gamespy INTERFACE GSI_WINSOCK2)
+    endif()
+endif()
+
 if(GS_BUILD_TESTS)
     add_executable(chattest chat/chatc/chatc.c)
     target_link_libraries(chattest gamespy)
