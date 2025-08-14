@@ -69,6 +69,7 @@
 #include <windows.h>
 #include <limits.h>
 #include <time.h>
+#include <tchar.h>
 
 #if defined(GSI_WINSOCK2)
 #include <winsock2.h>
