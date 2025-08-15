@@ -20,8 +20,6 @@ devsupport@gamespy.com
 extern "C" {
 #endif
 
-#define GUSE_ASSERTS
-
 /*****
 QR2CDKEY_INTEGRATION: This define controls where the functions needed to integrate
 the networking of the Query & Reporting 2 SDK and CDKey SDKs are available.
