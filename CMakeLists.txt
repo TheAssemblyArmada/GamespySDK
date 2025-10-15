@@ -101,16 +101,12 @@ if(GS_INCLUDE_VOICE)
         FetchContent_Declare(
             speex_git
             GIT_REPOSITORY https://github.com/TheAssemblyArmada/speex.git
-            GIT_TAG        1462ebd7f0b022567dafbd1b0e645994cff78577
+            GIT_TAG        a9a8d07faab4851869f0c683e9d9e38a7ec6069f
+            EXCLUDE_FROM_ALL
         )
 
-        # We don't use FetchContent_MakeAvailable here because we don't want all speex targets including, just our dependencies.
-        FetchContent_GetProperties(speex_git)
-        if(NOT speex_git_POPULATED)
-            FetchContent_Populate(speex_git)    
-            set(ENABLE_PACKAGE_CONFIG FALSE)
-            add_subdirectory(${speex_git_SOURCE_DIR} ${speex_git_BINARY_DIR} EXCLUDE_FROM_ALL)
-        endif()
+        set(ENABLE_PACKAGE_CONFIG FALSE)
+        FetchContent_MakeAvailable(speex_git)
         set(SPEEX_LIBRARIES speex)
     endif()
 endif()
@@ -124,18 +120,13 @@ if(GS_OPENSSL)
         FetchContent_Declare(
             openssl_git
             GIT_REPOSITORY https://github.com/janbar/openssl-cmake.git
-            GIT_TAG        e0224176e43dbbfb5308ae5f3d44611180138419
+            GIT_TAG        b0ac69581958cd658364147da9057da89a01c394
+            EXCLUDE_FROM_ALL
         )
 
-        # We don't use FetchContent_MakeAvailable here because we don't want all OpenSSL targets including, just our dependencies.
-        FetchContent_GetProperties(openssl_git)
-        if(NOT openssl_git_POPULATED)
-            FetchContent_Populate(openssl_git)
-            set(ENABLE_PACKAGE_CONFIG FALSE)
-            # TODO currently we don't support linking the static runtime.
-            set(MSVC_DYNAMIC_RUNTIME TRUE)
-            add_subdirectory(${openssl_git_SOURCE_DIR} ${openssl_git_BINARY_DIR} EXCLUDE_FROM_ALL)
-        endif()
+        set(ENABLE_PACKAGE_CONFIG FALSE)
+        set(MSVC_DYNAMIC_RUNTIME TRUE)
+        FetchContent_MakeAvailable(openssl_git)
         add_library(OpenSSL::SSL ALIAS ssl)
     endif()
 endif()
