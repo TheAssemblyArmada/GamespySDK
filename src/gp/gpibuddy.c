@@ -52,7 +52,7 @@ GPResult gpiProcessRecvBuddyMessage(GPConnection* connection, const char* input)
     unsigned short port;
     int productID;
     GPIConnection* iconnection = (GPIConnection*)*connection;
-    char strTemp[max(GP_STATUS_STRING_LEN, GP_LOCATION_STRING_LEN)];
+    char strTemp[GSI_MAX(GP_STATUS_STRING_LEN, GP_LOCATION_STRING_LEN)];
 
     // Check the type of bm.
     ////////////////////////

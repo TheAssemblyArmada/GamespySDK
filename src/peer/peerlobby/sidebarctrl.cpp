@@ -136,11 +136,11 @@ void CSideBarCtrl::DrawGradient(CDC* pDC, const CRect &rcGrad, COLORREF clrStart
 	int r = (GetRValue(clrEnd) - GetRValue(clrStart));
 	int g = (GetGValue(clrEnd) - GetGValue(clrStart));
 	int b = (GetBValue(clrEnd) - GetBValue(clrStart));
-	int nSteps = max(abs(r), max(abs(g), abs(b)));
+	int nSteps = GSI_MAX(abs(r), GSI_MAX(abs(g), abs(b)));
 	// if number of pixels in gradient less than number of steps - 
 	// use it as numberof steps
 	int nPixels = rcGrad.Width();
-	nSteps = min(nPixels, nSteps);
+	nSteps = GSI_MIN(nPixels, nSteps);
 	if(nSteps == 0) nSteps = 1;
 
 	float rStep = (float)r/nSteps;

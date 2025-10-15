@@ -662,7 +662,7 @@ gviHardwareCapturePacket(GVDevice device, GVByte* packet, int* len, GVFrameStamp
     framesAvailable = (lenAvailable / GVIEncodedFrameSize);
 
     // don't give them more frames than they can handle
-    numFrames = min(numFrames, framesAvailable);
+    numFrames = GSI_MIN(numFrames, framesAvailable);
     if (!numFrames)
         return GVFalse;
 
@@ -689,7 +689,7 @@ gviHardwareCapturePacket(GVDevice device, GVByte* packet, int* len, GVFrameStamp
         if (volume) {
             GVScalar vol1 = gviGetSamplesVolume(audioPtr1, audioLen1 / GV_BYTES_PER_SAMPLE);
             GVScalar vol2 = gviGetSamplesVolume(audioPtr2, audioLen2 / GV_BYTES_PER_SAMPLE);
-            *volume = max(vol1, vol2);
+            *volume = GSI_MAX(vol1, vol2);
         }
 
         // check against the threshold

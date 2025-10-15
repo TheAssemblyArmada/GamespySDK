@@ -261,7 +261,7 @@ gviHardwareCapturePacket(GVDevice device, GVByte* packet, int* len, GVFrameStamp
     framesAvailable = (lenAvailable / GVIEncodedFrameSize);
 
     // don't give them more frames than they can handle
-    numFrames = min(numFrames, framesAvailable);
+    numFrames = GSI_MIN(numFrames, framesAvailable);
     if (!numFrames)
         return GVFalse;
 

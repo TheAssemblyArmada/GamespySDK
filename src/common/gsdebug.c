@@ -226,7 +226,7 @@ void gsDebugBinary(GSIDebugCategory theCat,
 
     // convert and display in 40 byte segments
     while (aBytesLeft > 0) {
-        gsi_i32 aBytesToRead = min(aBytesLeft, 16);
+        gsi_i32 aBytesToRead = GSI_MIN(aBytesLeft, 16);
 
         HexEncode16(aReadPos, aHexStr, (unsigned int)aBytesToRead);
         gsDebugFormat(theCat, theType, theLevel, "  %s\r\n", aHexStr);

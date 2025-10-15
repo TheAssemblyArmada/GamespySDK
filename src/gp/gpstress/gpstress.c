@@ -623,7 +623,7 @@ void ConnectCallback(GPConnection* connection, GPConnectResponseArg* arg, Profil
         profile->connected = true;
         numConnected++;
         totalConnected++;
-        highestConnected = max(numConnected, highestConnected);
+        highestConnected = GSI_MAX(numConnected, highestConnected);
 
         if (arg->profile != RemoteAuthProfiles[profile->index % 10]) {
             char buffer[4096];
@@ -1163,7 +1163,7 @@ void InitializeProfile(Profile* profile)
     //////////////////////////////////////////////
     numConnections++;
     totalConnections++;
-    highestConnections = max(highestConnections, numConnections);
+    highestConnections = GSI_MAX(highestConnections, numConnections);
 }
 
 /***************
@@ -1186,7 +1186,7 @@ void GetUserNicksCallback(GPConnection* connection, GPGetUserNicksResponseArg* a
 
     // Copy the nicks.
     //////////////////
-    validationData->numNicks = min(arg->numNicks, VALIDATION_MAX_NICKS);
+    validationData->numNicks = GSI_MIN(arg->numNicks, VALIDATION_MAX_NICKS);
     for (i = 0; i < arg->numNicks; i++)
         strcpy(validationData->nicks[i], arg->nicks[i]);
     GSI_UNUSED(connection);
@@ -1479,7 +1479,7 @@ void Frame(unsigned long now)
         // How many connects should we do?
         //////////////////////////////////
         numConnects = ((timeDiff * connectsPerSecond) / 1000);
-        numConnects = min(numConnects, (MAX_OUTSTANDING_CONNECTIONS - (numConnections - numConnected)));
+        numConnects = GSI_MIN(numConnects, (MAX_OUTSTANDING_CONNECTIONS - (numConnections - numConnected)));
 
         // Do the connects.
         ///////////////////

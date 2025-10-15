@@ -162,7 +162,7 @@ static void piProcessPing(PEER peer, piPlayer* player, int ping)
     if (player->pingHistoryNum > 0)
         memmove(player->pingHistory + 1,
                 player->pingHistory,
-                min(player->pingHistoryNum, PI_PING_HISTORY_LEN - 1) * sizeof(int));
+                GSI_MIN(player->pingHistoryNum, PI_PING_HISTORY_LEN - 1) * sizeof(int));
     player->pingHistory[0] = ping;
     if (player->pingHistoryNum < PI_PING_HISTORY_LEN)
         player->pingHistoryNum++;
@@ -501,7 +501,7 @@ static void piPickPingPlayersMap(void* elem, void* clientData)
 // Returns an array of pointers to players to ping,
 // or NULL if there's noone to ping.
 // The number of players in the array will be no
-// larger than min(PI_MAX_PING_PLAYERS, numPings).
+// larger than GSI_MIN(PI_MAX_PING_PLAYERS, numPings).
 ///////////////////////////////////////////////////
 static piPlayer** piPickPingPlayers(PEER peer, int* numPings)
 {
@@ -520,7 +520,7 @@ static piPlayer** piPickPingPlayers(PEER peer, int* numPings)
     ///////////////////////////////////
     data.peer = peer;
     data.players = players;
-    data.max = min(PI_MAX_PING_PLAYERS, *numPings);
+    data.max = GSI_MIN(PI_MAX_PING_PLAYERS, *numPings);
     data.num = 0;
     memset(players, 0, sizeof(piPlayer*) * data.max);
     TableMap(connection->players, piPickPingPlayersMap, &data);

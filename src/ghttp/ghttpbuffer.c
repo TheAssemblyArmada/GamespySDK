@@ -281,7 +281,7 @@ GHTTPBool ghiEncryptDataToBuffer(GHIBuffer* buffer, const char* data, int dataLe
     bufSpace = buffer->size - buffer->len;
 
     do {
-        int fragmentLen = min(dataLen, GS_SSL_MAX_CONTENTLENGTH);
+        int fragmentLen = GSI_MIN(dataLen, GS_SSL_MAX_CONTENTLENGTH);
 
         // Call the encryptor function
         //    bufSize is reduced by the number of bytes written
@@ -455,7 +455,7 @@ GHTTPBool ghiReadDataFromBuffer(GHIBuffer* bufferIn, // the GHIBuffer to read fr
         return GHTTPFalse;
 
     // Calculate the actual number of bytes to copy
-    bytesToCopy = min(*len - 1, bytesAvailable);
+    bytesToCopy = GSI_MIN(*len - 1, bytesAvailable);
 
     // Copy the bytes
     memcpy(bufferOut, bufferIn->data + bufferIn->pos, (size_t)bytesToCopy);

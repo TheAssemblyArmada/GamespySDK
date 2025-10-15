@@ -164,7 +164,7 @@ gsi_bool gsiLargeIntSizePower2(const gsLargeInt_t* src1, const gsLargeInt_t* src
         len2--;
 
     // set to longer length
-    *lenout = (l_word)max(len1, len2);
+    *lenout = (l_word)GSI_MAX(len1, len2);
 
     // search for power of two >= length
     //   (this length is in digits, not bits)
@@ -326,7 +326,7 @@ gsi_bool
 gsiLargeIntSub(const l_word* src1, l_word length1, const l_word* src2, l_word length2, l_word* dest, l_word* lenout)
 {
     l_dword borrow = 0; // to hold overflow
-    gsi_u32 shorterLen = min(length1, length2);
+    gsi_u32 shorterLen = GSI_MIN(length1, length2);
     gsi_u32 i = 0;
 
     GSLINT_ENTERTIMER(GSLintTimerSub);
@@ -702,7 +702,7 @@ gsi_bool gsLargeIntKMult(const gsLargeInt_t* src1, const gsLargeInt_t* src2, gsL
     }
 
     // when length is small it's faster to use "normal" multiplication
-    if (max(src1->mLength, src2->mLength) < GS_LARGEINT_KARATSUBA_CUTOFF)
+    if (GSI_MAX(src1->mLength, src2->mLength) < GS_LARGEINT_KARATSUBA_CUTOFF)
         return gsLargeIntMult(src1, src2, dest);
 
     // Check for size/length restrictions
@@ -1703,7 +1703,7 @@ gsi_bool gsLargeIntSetFromHexString(gsLargeInt_t* lint, const char* hexstream)
             writePos++;
             byteIndex = 0;
         }
-        len -= min(2, len);
+        len -= GSI_MIN(2, len);
     }
     return gsi_true;
 }
