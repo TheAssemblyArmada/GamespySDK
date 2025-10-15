@@ -319,7 +319,7 @@ static const char* FieldValueToString(SAKEField* field)
         return str;
     } else if (type == SAKEFieldType_BINARY_DATA) {
         int i;
-        int len = min(value->mBinaryData.mLength, 8);
+        int len = GSI_MIN(value->mBinaryData.mLength, 8);
         for (i = 0; i < len; i++)
             sprintf(buffer + (len * 2), "%0X", value->mBinaryData.mValue[i]);
         buffer[len * 2] = '\0';

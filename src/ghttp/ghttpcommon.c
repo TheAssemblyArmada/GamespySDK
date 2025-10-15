@@ -273,7 +273,7 @@ GHIRecvResult ghiDoReceive(GHIConnection* connection, char buffer[], int* buffer
 
         // Don't receive too much.
         //////////////////////////
-        len = min(len, ghiThrottleBufferSize);
+        len = GSI_MIN(len, ghiThrottleBufferSize);
     }
 
     // Receive some data.

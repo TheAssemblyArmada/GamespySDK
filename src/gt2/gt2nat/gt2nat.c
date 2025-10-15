@@ -299,7 +299,7 @@ GT2Bool UnrecognizedMessageCallback(GT2Socket socket, unsigned int ip, unsigned 
         return GT2False;
 
     // we want to make sure it is NUL-terminated
-    len = min(len, (sizeof(buffer) - 1));
+    len = GSI_MIN(len, (sizeof(buffer) - 1));
     memcpy(buffer, message, len);
     buffer[len] = '\0';
 

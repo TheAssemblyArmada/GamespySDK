@@ -1473,8 +1473,8 @@ gsi_bool gsXmlReadChildAsStringNT(GSXmlStreamReader stream, const char* matchtag
         valueOut[0] = '\0';
         return gsi_false;
     } else {
-        strncpy(valueOut, strValue, (size_t)min(maxLen, strLen));
-        valueOut[min(maxLen - 1, strLen)] = '\0';
+        strncpy(valueOut, strValue, (size_t)GSI_MIN(maxLen, strLen));
+        valueOut[GSI_MIN(maxLen - 1, strLen)] = '\0';
         return gsi_true;
     }
 }
@@ -1495,7 +1495,7 @@ gsXmlReadChildAsUnicodeStringNT(GSXmlStreamReader stream, const char* matchtag, 
     } else {
         // Convert into destination buffer
         unicodeLen = UTF8ToUCS2StringLen(utf8Value, (unsigned short*)valueOut, utf8Len);
-        valueOut[min(maxLen - 1, unicodeLen)] = '\0';
+        valueOut[GSI_MIN(maxLen - 1, unicodeLen)] = '\0';
         return gsi_true;
     }
 }
@@ -1522,7 +1522,7 @@ gsXmlReadChildAsHexBinary(GSXmlStreamReader stream, const char* matchtag, gsi_u8
                 gsi_u32 temp = 0;
                 int writepos = 0;
                 int readpos = 0;
-                int bytesleft = min(maxLen * 2, searchValueElem->mValue.mLen);
+                int bytesleft = GSI_MIN(maxLen * 2, searchValueElem->mValue.mLen);
 
                 // special case: zero length value
                 if (searchValueElem->mValue.mLen == 0 || searchValueElem->mValue.mData == NULL) {

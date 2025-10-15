@@ -238,7 +238,7 @@ GPResult gpiProfileSearchUniquenick(GPConnection* connection,
     ////////////////////
     strzcpy(data->uniquenick, uniquenick, GP_UNIQUENICK_LEN);
     if ((namespaceIDs != NULL) && (numNamespaces > 0)) {
-        data->numNamespaces = min(numNamespaces, GP_MAX_NAMESPACEIDS);
+        data->numNamespaces = GSI_MIN(numNamespaces, GP_MAX_NAMESPACEIDS);
         memcpy(data->namespaceIDs, namespaceIDs, sizeof(namespaceIDs[0]) * data->numNamespaces);
     } else {
         data->numNamespaces = 0;

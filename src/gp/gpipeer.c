@@ -1046,7 +1046,7 @@ void gpiPeerMessageCallback(unsigned int ip,
     ///////////////////////////////////////////
     if ((int)messageLength > (size - writePos)) {
         unsigned char* reallocedBuff;
-        size = (writePos + max(GPI_READ_SIZE, (int)messageLength));
+        size = (writePos + GSI_MAX(GPI_READ_SIZE, (int)messageLength));
         reallocedBuff = (unsigned char*)gsirealloc(buff, (unsigned int)size + 1);
         if (reallocedBuff == NULL) {
             gsDebugFormat(GSIDebugCat_GP,

@@ -1045,7 +1045,7 @@ static GHIPostingResult ghiPostFileMemoryStateDoPosting(GHIPostState* state, GHI
         GHITrySendResult result;
         do {
             len = (state->data->data.fileMemory.len - state->pos);
-            len = min(len, GS_SSL_MAX_CONTENTLENGTH);
+            len = GSI_MIN(len, GS_SSL_MAX_CONTENTLENGTH);
             result = ghiTrySendThenBuffer(connection, state->data->data.fileMemory.buffer + state->pos, len);
             if (result == GHITrySendError)
                 return GHIPostingError;

@@ -234,7 +234,7 @@ static GVBool gviCFStringToString(CFStringRef ref, gsi_char str[], int strLen)
 
     range.location = 0;
     range.length = CFStringGetLength(ref);
-    range.length = min(range.length, strLen - 1);
+    range.length = GSI_MIN(range.length, strLen - 1);
 
     CFStringGetCharacters(ref, range, str);
     str[range.length] = '\0';

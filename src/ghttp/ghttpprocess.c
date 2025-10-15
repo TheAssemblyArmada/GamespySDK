@@ -1013,7 +1013,7 @@ static void ghiAppendToChunkHeaderBuffer(GHIConnection* connection, char* data, 
 
         // How many bytes are we copying?
         /////////////////////////////////
-        numBytes = min(CHUNK_HEADER_SIZE - connection->chunkHeaderLen, len);
+        numBytes = GSI_MIN(CHUNK_HEADER_SIZE - connection->chunkHeaderLen, len);
 
         // Move the (possibly partial) header into the buffer.
         //////////////////////////////////////////////////////
@@ -1103,7 +1103,7 @@ static GHTTPBool ghiProcessIncomingFileData(GHIConnection* connection, char* dat
 
                 // How many bytes of data are we dealing with?
                 //////////////////////////////////////////////
-                numBytes = min(connection->chunkBytesLeft, len);
+                numBytes = GSI_MIN(connection->chunkBytesLeft, len);
 
                 gsDebugFormat(GSIDebugCat_HTTP,
                               GSIDebugType_Network,

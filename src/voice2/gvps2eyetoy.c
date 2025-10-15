@@ -228,7 +228,7 @@ static void gviPS2EyetoySetDeviceVolume(GVIDevice* device, GVDeviceType type, GV
 
     // the gain varies from 0 (silence) to 8 (full gain)
     gain = (u_char)(volume * 8);
-    gain = (unsigned char)min(gain, 8);
+    gain = (unsigned char)GSI_MIN(gain, 8);
 
     // setup the camera control struct
     cameraControl.Flags = LGVID_FLAG_AUDIO_GAIN;

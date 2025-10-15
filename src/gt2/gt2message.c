@@ -540,7 +540,7 @@ static void gti2RemoveHoldMessage(GT2Connection connection, GTI2IncomingBufferMe
         message = (GTI2IncomingBufferMessage*)ArrayNth(connection->incomingBufferMessages, i);
         if (message->start > moveAfter) {
             message->start -= shortenBy;
-            moveEnd = max(moveEnd, message->start + message->len);
+            moveEnd = GSI_MAX(moveEnd, message->start + message->len);
         }
     }
 

@@ -803,7 +803,7 @@ static GVBool CheckInput(void)
         case 'f':
             if (capDevice) {
                 volume = gvGetDeviceVolume(capDevice, GV_CAPTURE);
-                volume = max(0.0, (volume - 0.2));
+                volume = GSI_MAX(0.0, (volume - 0.2));
                 gvSetDeviceVolume(capDevice, GV_CAPTURE, volume);
                 printf("Capture volume set: %.f%%\n", (float)volume * 100);
             }
@@ -811,7 +811,7 @@ static GVBool CheckInput(void)
         case 'g':
             if (capDevice) {
                 volume = gvGetDeviceVolume(capDevice, GV_CAPTURE);
-                volume = min(1.0, (volume + 0.2));
+                volume = GSI_MIN(1.0, (volume + 0.2));
                 gvSetDeviceVolume(capDevice, GV_CAPTURE, volume);
                 printf("Capture volume set: %.f%%\n", (float)volume * 100);
             }
@@ -819,7 +819,7 @@ static GVBool CheckInput(void)
         case 'r':
             if (playDevice) {
                 volume = gvGetDeviceVolume(playDevice, GV_PLAYBACK);
-                volume = max(0.0, (volume - 0.2));
+                volume = GSI_MAX(0.0, (volume - 0.2));
                 gvSetDeviceVolume(playDevice, GV_PLAYBACK, volume);
                 printf("Playback volume set: %.f%%\n", (float)volume * 100);
             }
@@ -827,7 +827,7 @@ static GVBool CheckInput(void)
         case 't':
             if (playDevice) {
                 volume = gvGetDeviceVolume(playDevice, GV_PLAYBACK);
-                volume = min(1.0, (volume + 0.2));
+                volume = GSI_MIN(1.0, (volume + 0.2));
                 gvSetDeviceVolume(playDevice, GV_PLAYBACK, volume);
                 printf("Playback volume set: %.f%%\n", (float)volume * 100);
             }

@@ -61,7 +61,7 @@ static const char* ptaGetKeyValue(const char* buffer, const char* key)
         return NULL;
     str += strlen(key);
     len = (int)strcspn(str, "\\");
-    len = min(len, (int)sizeof(value) - 1);
+    len = GSI_MIN(len, (int)sizeof(value) - 1);
     memcpy(value, str, (unsigned int)len);
     value[len] = '\0';
 

@@ -83,7 +83,7 @@ gpiAppendStringToBufferLen(GPConnection* connection, GPIBuffer* outputBuffer, co
     // Check if it needs to be resized.
     ///////////////////////////////////
     if ((size - len) < stringLen) {
-        size += max(GPI_READ_SIZE, stringLen);
+        size += GSI_MAX(GPI_READ_SIZE, stringLen);
         output = (char*)gsirealloc(output, (unsigned int)size + 1);
         if (output == NULL)
             Error(connection, GP_MEMORY_ERROR, "Out of memory.");

@@ -320,7 +320,7 @@ int gviPS3HeadsetListDevices(GVDeviceInfo devices[], int maxDevices, GVDeviceTyp
     int index;
     int numDevices = 0;
 
-    maxDevices = min(maxDevices, CELL_MAX_MICS);
+    maxDevices = GSI_MIN(maxDevices, CELL_MAX_MICS);
 
     for (index = 0; index < maxDevices; index++) {
         if (cellMicIsAttached(index)) {

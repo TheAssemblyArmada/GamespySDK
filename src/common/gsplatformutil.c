@@ -1254,7 +1254,7 @@ void B64Encode(const char* input, char* output, int inlen, int encodingType)
 
     //assume interval of 3
     while (todo > 0) {
-        TripToQuart(input, output, min(todo, 3));
+        TripToQuart(input, output, GSI_MIN(todo, 3));
         output += 4;
         input += 3;
         todo -= 3;
@@ -1337,7 +1337,7 @@ gsi_bool B64EncodeStream(B64StreamData* data, char output[4])
         encoding = defaultEncoding;
     }
 
-    TripToQuart(data->input, output, min(data->len, 3));
+    TripToQuart(data->input, output, GSI_MIN(data->len, 3));
     data->input += 3;
     data->len -= 3;
 
