@@ -302,7 +302,10 @@ typedef int gsi_bool;
 typedef signed long gsi_i64;
 typedef unsigned long gsi_u64;
 #elif defined(_WIN32)
-#if (!defined(_M_IX86) || (defined(_INTEGRAL_MAX_BITS) && _INTEGRAL_MAX_BITS >= 64))
+// MSVC: defines _M_IX86 and _INTEGRAL_MAX_BITS
+// GCC/MinGW: defines _INTEGRAL_MAX_BITS=64
+// Clang/MinGW: defines neither, but supports 64-bit integers via long long
+#if (!defined(_M_IX86) || (defined(_INTEGRAL_MAX_BITS) && _INTEGRAL_MAX_BITS >= 64) || defined(__clang__))
 typedef __int64 gsi_i64;
 typedef unsigned __int64 gsi_u64;
 #endif
