@@ -38,6 +38,13 @@
 #define _UNIX
 #endif
 
+#if defined(__APPLE__)
+#include <TargetConditionals.h>
+#if TARGET_OS_MAC
+#define _MACOSX
+#endif
+#endif
+
 #if defined(_XBOX) || defined(_X360)
 #if _XBOX_VER >= 200
 #define _X360
