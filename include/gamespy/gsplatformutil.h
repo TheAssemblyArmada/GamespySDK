@@ -32,7 +32,7 @@ unsigned int gsiGetResolvedIP(GSIResolveHostnameHandle handle);
 ///////////////////////////////////////////////////////////////////////////////
 // Get rid of compiler warnings when parameters are never used
 // (Mainly used in sample apps and callback for platform switches)
-#if (defined(__MWERKS__) && !defined(_NITRO)) || defined(WIN32)
+#if (defined(__MWERKS__) && !defined(_NITRO))
 #define GSI_UNUSED(x) x
 #elif defined(_PS2) || defined(_NITRO) || defined(_PS3) || defined(_MACOSX)
 #define GSI_UNUSED(x)                                                                                                  \
@@ -40,8 +40,8 @@ unsigned int gsiGetResolvedIP(GSIResolveHostnameHandle handle);
         void* y = &x;                                                                                                  \
         y = NULL;                                                                                                      \
     }
-#elif defined(_PSP)
-#define GSI_UNUSED(x) (void)x;
+#elif defined(_PSP) || defined(_WIN32)
+#define GSI_UNUSED(x) (void)x
 
 #else
 #define GSI_UNUSED(x)

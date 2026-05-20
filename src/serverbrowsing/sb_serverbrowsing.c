@@ -299,7 +299,7 @@ static SBError WaitForTriggerUpdate(ServerBrowser sb, SBBool viaMaster)
     while (sb->triggerIP != 0 && err == sbe_noerror) {
         msleep(10);
         err = ServerBrowserThink(sb);
-        if (viaMaster && sb->list.state == sb_disconnected) //we were supposed to get from master, and it's disconnected
+        if (viaMaster && sb->list.state == sl_disconnected) //we were supposed to get from master, and it's disconnected
             break;
     }
     return err;
