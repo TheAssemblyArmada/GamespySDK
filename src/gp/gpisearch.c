@@ -841,7 +841,7 @@ static GPResult gpiProcessSearch(GPConnection* connection, GPIOperation* operati
 
                     // Start a new operation if they want more matches.
                     ///////////////////////////////////////////////////
-                    if ((more == GP_MORE) && (arg.more == GP_MORE))
+                    if ((more == GPITrue) && (arg.more == GP_MORE))
                         CHECK_RESULT(gpiProfileSearch(connection,
                                                       data->nick,
                                                       data->uniquenick,
