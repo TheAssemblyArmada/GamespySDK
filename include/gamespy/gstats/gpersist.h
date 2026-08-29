@@ -175,7 +175,7 @@ authenticated: 1 if the player was authenticated < 1 otherwise
 errmsg: Error returned by the server to indicate why the player was not authenticated
 instance: Opaque value passed into the PreAuthenticate function (for your use)
 *****************/
-typedef void (*PersAuthCallbackFn)(int localid, int profileid, int authenticated, gsi_char* errmsg, void* instance);
+typedef void (*PersAuthCallbackFn)(int localid, int profileid, int authenticated, const gsi_char* errmsg, const void* instance);
 
 /****************
 PersDataCallbackFn
@@ -208,9 +208,9 @@ typedef void (*PersDataCallbackFn)(int localid,
                                    int index,
                                    int success,
                                    time_t modified,
-                                   char* data,
+                                   const char* data,
                                    int len,
-                                   void* instance);
+                                   const void* instance);
 
 /****************
 PersDataSaveCallbackFn

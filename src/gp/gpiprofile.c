@@ -1083,7 +1083,7 @@ GPResult gpiProcessRecvBlockedList(GPConnection* connection, const char* input)
     int num = 0;
     int index = 0;
     char c;
-    char* str = NULL;
+    const char* str = NULL;
     char buffer[512];
     GPIProfile* profile;
     GPProfile profileid;

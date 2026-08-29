@@ -111,7 +111,7 @@ static void ProcessGetData(const char* buf, int len);
 static void ProcessSetData(const char* buf, int len);
 static void ProcessStatement(char* buff, int len);
 static int ProcessInBuffer(char* buff, int len);
-static void CallReqCallback(int reqindex, int success, time_t modified, char* data, int length);
+static void CallReqCallback(int reqindex, int success, time_t modified, const char* data, int length);
 static void ClosePendingCallbacks();
 static void SetPersistDataHelper(int localid,
                                  int profileid,
@@ -1244,7 +1244,8 @@ Note: the value is stored in a common buffer. If you want to keep it, make a cop
 static char* value_for_key(const char* s, const char* key)
 {
     static int valueindex;
-    char *pos, *pos2;
+    const char *pos;
+    char *pos2;
     char keyspec[256] = "\\";
     static char value[2][256];
 
@@ -1506,7 +1507,7 @@ static void ProcessGetData(const char* buf, int len)
     int success;
     int length;
     time_t modified;
-    char* data;
+    const char* data;
     success = atoi(value_for_key_safe(buf, "getpdr"));
     lid = atoi(value_for_key_safe(buf, "lid"));
     pid = atoi(value_for_key_safe(buf, "pid"));
@@ -1588,7 +1589,7 @@ static int ProcessInBuffer(char* buff, int len)
 }
 
 /* call a single callback function */
-static void CallReqCallback(int reqindex, int success, time_t modified, char* data, int length)
+static void CallReqCallback(int reqindex, int success, time_t modified, const char* data, int length)
 {
     serverreq_t* req;
     if (reqindex < 0 || reqindex >= ArrayLength(serverreqs))

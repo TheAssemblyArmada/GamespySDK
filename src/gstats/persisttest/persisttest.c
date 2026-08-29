@@ -52,7 +52,7 @@ typedef struct playerdata_s
     char skin[9];
 } playerdata_t;
 
-static void PersAuthCallback(int localid, int profileid, int authenticated, gsi_char* errmsg, void* instance)
+static void PersAuthCallback(int localid, int profileid, int authenticated, const gsi_char* errmsg, const void* instance)
 {
     _tprintf(
         _T("Auth callback: localid: %d profileid: %d auth: %d err: %s\n"), localid, profileid, authenticated, errmsg);
@@ -69,9 +69,9 @@ static void PersDataCallback(int localid,
                              int index,
                              int success,
                              time_t modified,
-                             char* data,
+                             const char* data,
                              int len,
-                             void* instance)
+                             const void* instance)
 {
     printf("Data get callback: localid: %d profileid: %d success: %d mod: %d len: %d data: %s\n",
            localid,
@@ -95,9 +95,9 @@ static void PlayerDataCallback(int localid,
                                int index,
                                int success,
                                time_t modified,
-                               char* data,
+                               const char* data,
                                int len,
-                               void* instance)
+                               const void* instance)
 {
     playerdata_t pdata;
     /* we copy it off, instead of reading directly, since the data may not be aligned correctly for the SH4/other processors */
