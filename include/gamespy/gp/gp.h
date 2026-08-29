@@ -868,9 +868,9 @@ GPResult gpSetCallback(GPConnection* connection, GPEnum func, GPCallback callbac
 // gpConnect
 ////////////
 GPResult gpConnect(GPConnection* connection,
-                   const gsi_char nick[GP_NICK_LEN],
-                   const gsi_char email[GP_EMAIL_LEN],
-                   const gsi_char password[GP_PASSWORD_LEN],
+                   const gsi_char *nick gs_in_reads_z(GP_NICK_LEN),
+                   const gsi_char *email gs_in_reads_z(GP_EMAIL_LEN),
+                   const gsi_char *password gs_in_reads_z(GP_PASSWORD_LEN),
                    GPEnum firewall,
                    GPEnum blocking,
                    GPCallback callback,
@@ -879,11 +879,11 @@ GPResult gpConnect(GPConnection* connection,
 // gpConnectNewUser
 ///////////////////
 GPResult gpConnectNewUser(GPConnection* connection,
-                          const gsi_char nick[GP_NICK_LEN],
-                          const gsi_char uniquenick[GP_UNIQUENICK_LEN],
-                          const gsi_char email[GP_EMAIL_LEN],
-                          const gsi_char password[GP_PASSWORD_LEN],
-                          const gsi_char cdkey[GP_CDKEY_LEN],
+                          const gsi_char *nick gs_in_reads_z(GP_NICK_LEN),
+                          const gsi_char *uniquenick gs_in_reads_z(GP_UNIQUENICK_LEN),
+                          const gsi_char *email gs_in_reads_z(GP_EMAIL_LEN),
+                          const gsi_char *password gs_in_reads_z(GP_PASSWORD_LEN),
+                          const gsi_char *cdkey gs_in_reads_z(GP_CDKEY_LEN),
                           GPEnum firewall,
                           GPEnum blocking,
                           GPCallback callback,
@@ -892,8 +892,8 @@ GPResult gpConnectNewUser(GPConnection* connection,
 // gpConnectUniqueNick
 //////////////////////
 GPResult gpConnectUniqueNick(GPConnection* connection,
-                             const gsi_char uniquenick[GP_UNIQUENICK_LEN],
-                             const gsi_char password[GP_PASSWORD_LEN],
+                             const gsi_char *uniquenick gs_in_reads_z(GP_UNIQUENICK_LEN),
+                             const gsi_char *password gs_in_reads_z(GP_PASSWORD_LEN),
                              GPEnum firewall,
                              GPEnum blocking,
                              GPCallback callback,
@@ -902,8 +902,8 @@ GPResult gpConnectUniqueNick(GPConnection* connection,
 // gpConnectPreAuthenticated
 ////////////////////////////
 GPResult gpConnectPreAuthenticated(GPConnection* connection,
-                                   const gsi_char authtoken[GP_AUTHTOKEN_LEN],
-                                   const gsi_char partnerchallenge[GP_PARTNERCHALLENGE_LEN],
+                                   const gsi_char *authtoken gs_in_reads_z(GP_AUTHTOKEN_LEN),
+                                   const gsi_char *partnerchallenge gs_in_reads_z(GP_PARTNERCHALLENGE_LEN),
                                    GPEnum firewall,
                                    GPEnum blocking,
                                    GPCallback callback,
@@ -920,9 +920,9 @@ GPResult gpIsConnected(GPConnection* connection, GPEnum* connected);
 // gpCheckUser
 //////////////
 GPResult gpCheckUser(GPConnection* connection,
-                     const gsi_char nick[GP_NICK_LEN],
-                     const gsi_char email[GP_EMAIL_LEN],
-                     const gsi_char password[GP_PASSWORD_LEN],
+                     const gsi_char *nick gs_in_reads_z(GP_NICK_LEN),
+                     const gsi_char *email gs_in_reads_z(GP_EMAIL_LEN),
+                     const gsi_char *password gs_in_reads_z(GP_PASSWORD_LEN),
                      GPEnum blocking,
                      GPCallback callback,
                      void* param);
@@ -930,11 +930,11 @@ GPResult gpCheckUser(GPConnection* connection,
 // gpNewUser
 ////////////
 GPResult gpNewUser(GPConnection* connection,
-                   const gsi_char nick[GP_NICK_LEN],
-                   const gsi_char uniquenick[GP_UNIQUENICK_LEN],
-                   const gsi_char email[GP_EMAIL_LEN],
-                   const gsi_char password[GP_PASSWORD_LEN],
-                   const gsi_char cdkey[GP_CDKEY_LEN],
+                   const gsi_char *nick gs_in_reads_z(GP_NICK_LEN),
+                   const gsi_char *uniquenick gs_in_reads_z(GP_UNIQUENICK_LEN),
+                   const gsi_char *email gs_in_reads_z(GP_EMAIL_LEN),
+                   const gsi_char *password gs_in_reads_z(GP_PASSWORD_LEN),
+                   const gsi_char *cdkey gs_in_reads_z(GP_CDKEY_LEN),
                    GPEnum blocking,
                    GPCallback callback,
                    void* param);
@@ -942,7 +942,7 @@ GPResult gpNewUser(GPConnection* connection,
 // gpSuggestUniqueNick
 //////////////////////
 GPResult gpSuggestUniqueNick(GPConnection* connection,
-                             const gsi_char desirednick[GP_UNIQUENICK_LEN],
+                             const gsi_char *desirednick gs_in_reads_z(GP_UNIQUENICK_LEN),
                              GPEnum blocking,
                              GPCallback callback,
                              void* param);
@@ -950,8 +950,8 @@ GPResult gpSuggestUniqueNick(GPConnection* connection,
 // gpRegisterUniqueNick
 ///////////////////////
 GPResult gpRegisterUniqueNick(GPConnection* connection,
-                              const gsi_char uniquenick[GP_UNIQUENICK_LEN],
-                              const gsi_char cdkey[GP_CDKEY_LEN],
+                              const gsi_char *uniquenick gs_in_reads_z(GP_UNIQUENICK_LEN),
+                              const gsi_char *cdkey gs_in_reads_z(GP_CDKEY_LEN),
                               GPEnum blocking,
                               GPCallback callback,
                               void* param);
@@ -959,7 +959,7 @@ GPResult gpRegisterUniqueNick(GPConnection* connection,
 // gpRegisterCdKey
 ///////////////////////
 GPResult gpRegisterCdKey(GPConnection* connection,
-                         const gsi_char cdkey[GP_CDKEY_LEN],
+                         const gsi_char *cdkey gs_in_reads_z(GP_CDKEY_LEN),
                          GPEnum blocking,
                          GPCallback callback,
                          void* param);
@@ -970,12 +970,12 @@ GPResult gpGetErrorCode(GPConnection* connection, GPErrorCode* errorCode);
 
 // gpGetErrorString
 ///////////////////
-GPResult gpGetErrorString(GPConnection* connection, gsi_char errorString[GP_ERROR_STRING_LEN]);
+GPResult gpGetErrorString(GPConnection* connection, gsi_char *errorString gs_in_reads_z(GP_ERROR_STRING_LEN));
 
 // gpNewProfile
 ///////////////
 GPResult gpNewProfile(GPConnection* connection,
-                      const gsi_char nick[GP_NICK_LEN],
+                      const gsi_char *nick gs_in_reads_z(GP_NICK_LEN),
                       GPEnum replace,
                       GPEnum blocking,
                       GPCallback callback,
@@ -1006,11 +1006,11 @@ GPResult gpUserIDFromProfile(GPConnection* connection, GPProfile profile, int* u
 // gpProfileSearch
 //////////////////
 GPResult gpProfileSearch(GPConnection* connection,
-                         const gsi_char nick[GP_NICK_LEN],
-                         const gsi_char uniquenick[GP_UNIQUENICK_LEN],
-                         const gsi_char email[GP_EMAIL_LEN],
-                         const gsi_char firstname[GP_FIRSTNAME_LEN],
-                         const gsi_char lastname[GP_LASTNAME_LEN],
+                         const gsi_char *nick gs_in_reads_z(GP_NICK_LEN),
+                         const gsi_char *uniquenick gs_in_reads_z(GP_UNIQUENICK_LEN),
+                         const gsi_char *email gs_in_reads_z(GP_EMAIL_LEN),
+                         const gsi_char *firstname gs_in_reads_z(GP_FIRSTNAME_LEN),
+                         const gsi_char *lastname gs_in_reads_z(GP_LASTNAME_LEN),
                          int icquin,
                          GPEnum blocking,
                          GPCallback callback,
@@ -1019,8 +1019,8 @@ GPResult gpProfileSearch(GPConnection* connection,
 // gpProfileSearchUniquenick
 ////////////////////////////
 GPResult gpProfileSearchUniquenick(GPConnection* connection,
-                                   const gsi_char uniquenick[GP_UNIQUENICK_LEN],
-                                   const int namespaceIDs[GP_MAX_NAMESPACEIDS],
+                                   const gsi_char *uniquenick gs_in_reads_z(GP_UNIQUENICK_LEN),
+                                   const int *namespaceIDs gs_in_reads_z(GP_MAX_NAMESPACEIDS),
                                    int numNamespaces,
                                    GPEnum blocking,
                                    GPCallback callback,
@@ -1057,7 +1057,7 @@ GPResult gpSetInfoMask(GPConnection* connection, GPEnum mask);
 
 // gpSendBuddyRequest
 /////////////////////
-GPResult gpSendBuddyRequest(GPConnection* connection, GPProfile profile, const gsi_char reason[GP_REASON_LEN]);
+GPResult gpSendBuddyRequest(GPConnection* connection, GPProfile profile, const gsi_char *reason gs_in_reads_z(GP_REASON_LEN));
 
 // gpAuthBuddyRequest
 /////////////////////
@@ -1126,8 +1126,8 @@ int gpIsBuddyConnectionOpen(GPConnection* connection, GPProfile profile);
 #ifndef GP_NEW_STATUS_INFO
 GPResult gpSetStatus(GPConnection* connection,
                      GPEnum status,
-                     const gsi_char statusString[GP_STATUS_STRING_LEN],
-                     const gsi_char locationString[GP_LOCATION_STRING_LEN]);
+                     const gsi_char *statusString gs_in_reads_z(GP_STATUS_STRING_LEN0),
+                     const gsi_char *locationString gs_in_reads_z(GP_LOCATION_STRING_LEN));
 #endif
 
 #ifdef GP_NEW_STATUS_INFO
@@ -1173,7 +1173,7 @@ GPResult gpSendBuddyUTM(GPConnection* connection,
 // gpIsValidEmail
 /////////////////
 GPResult gpIsValidEmail(GPConnection* connection,
-                        const gsi_char email[GP_EMAIL_LEN],
+                        const gsi_char *email gs_in_reads_z(GP_EMAIL_LEN),
                         GPEnum blocking,
                         GPCallback callback,
                         void* param);
@@ -1181,8 +1181,8 @@ GPResult gpIsValidEmail(GPConnection* connection,
 // gpGetUserNicks
 /////////////////
 GPResult gpGetUserNicks(GPConnection* connection,
-                        const gsi_char email[GP_EMAIL_LEN],
-                        const gsi_char password[GP_PASSWORD_LEN],
+                        const gsi_char *email gs_in_reads_z(GP_EMAIL_LEN),
+                        const gsi_char *password gs_in_reads_z(GP_PASSWORD_LEN),
                         GPEnum blocking,
                         GPCallback callback,
                         void* param);
@@ -1202,7 +1202,7 @@ GPResult gpFindPlayers(GPConnection* connection, int productID, GPEnum blocking,
 GPResult gpInvitePlayer(GPConnection* connection,
                         GPProfile profile,
                         int productID,
-                        const gsi_char location[GP_LOCATION_STRING_LEN]);
+                        const gsi_char *location gs_in_reads_z(GP_LOCATION_STRING_LEN));
 
 // gpGetReverseBuddies
 // Get profiles that have you on their buddy list.
@@ -1229,7 +1229,7 @@ GPResult gpSetCdKey(GPConnection* connection, const gsi_char cdkeyhash, GPCallba
 
 // gpGetLoginTicket
 /////////////////////////////
-GPResult gpGetLoginTicket(GPConnection* connection, char loginTicket[GP_LOGIN_TICKET_LEN]);
+GPResult gpGetLoginTicket(GPConnection* connection, char *loginTicket gs_in_reads_z(GP_LOGIN_TICKET_LEN));
 
 // gpSetQuietMode
 /////////////////
