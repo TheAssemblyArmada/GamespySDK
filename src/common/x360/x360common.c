@@ -20,7 +20,7 @@ static void DebugCallback(GSIDebugCategory theCat,
 }
 #endif
 
-#if (_MSC_VER <= 1300)
+#if defined(_MSC_VER) && _MSC_VER <= 1300
 //extern added for vc6 compatability.
 extern void* __cdecl _aligned_malloc(size_t size, int boundary);
 extern void* __cdecl _aligned_free(void* memblock);

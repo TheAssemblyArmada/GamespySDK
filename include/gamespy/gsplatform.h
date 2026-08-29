@@ -84,7 +84,7 @@
 #include <winsock.h>
 #endif
 
-#if (_MSC_VER > 1300)
+#if defined(_MSC_VER) && _MSC_VER > 1300
 #define itoa(v, s, r) _itoa(v, s, r)
 #endif
 // PS2
