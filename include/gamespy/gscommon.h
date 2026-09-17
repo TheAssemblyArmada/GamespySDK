@@ -47,6 +47,21 @@
 #define GSI_WRAP(x, minx, maxx)  (((x) < (minx) ? (maxx - 1) : ((x) >= (maxx) ? (minx) : (x))))
 #define GSI_DIM(x)               (sizeof(x) / sizeof((x)[0]))
 
+#ifdef __has_include
+#if __has_include(<sal.h>)
+#include <sal.h>
+#define HAVE_SAL_H
+#endif
+#endif
+
+#ifdef HAVE_SAL_H
+#define gs_in_reads_z(CNT)  _In_reads_z_(CNT)
+#define gs_out_writes_(CNT) _Out_writes_(CNT)
+#else
+#define gs_in_reads_z(CNT)
+#define gs_out_writes_(CNT)
+#endif
+
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 #endif // __GSCOMMON_H__
